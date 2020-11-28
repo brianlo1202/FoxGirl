@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: FoxGirl_Latest.ma
-//Last modified: Sat, Aug 22, 2020 06:48:22 PM
+//Last modified: Thu, Nov 26, 2020 01:12:25 PM
 //Codeset: UTF-8
 requires maya "2020";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiToon"
@@ -13,41 +13,34 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Mac OS X 10.14.6";
-fileInfo "UUID" "380BC3CE-2145-A29B-22AE-B7AB5CAFBCFF";
+fileInfo "UUID" "CF2BCE38-F34E-51E8-74F0-3E8427C963EC";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	rename -uid "7B096EC7-6D45-14A4-FAA2-C3B9B3A6218A";
+	rename -uid "BC2584DB-A64F-6007-C2FA-6FA6EE0F05BC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.0013788850864160853 1.093216774118007 0.70486516125177334 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 3.861647273024019 360.199999999022 -1.7083161447606473e-17 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "4950A3A0-DF40-6F29-9EF8-199E41D8144E";
+	rename -uid "772DFE8B-6E43-B322-4C49-8888F43426AE";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 0.39592118956857891;
+	setAttr ".ncp" 0.01;
+	setAttr ".coi" 1.4537221830678588;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 1.1198810543460154 0.30984528430220232 ;
+	setAttr ".tp" -type "double3" -0.23560495780755641 0.81072576292861231 0.18006580909033476 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
-	rename -uid "BA14050A-0D44-66DD-A3CD-F883392AC41E";
+	rename -uid "569CDAF2-2249-8C3A-4342-009A0B554D90";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 1000.1 0 ;
+	setAttr ".t" -type "double3" -14.090737784332317 1000.1 -3.4649355207374635 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "634E318A-954E-A533-0CEE-A3990A75B88E";
+	rename -uid "20CBF541-994A-5DA8-1EE5-44939A855C3B";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 110.30044741014231;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -55,61 +48,60 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "A3F3C92E-3649-125B-DAF1-D8A1F13DC8AC";
+	rename -uid "03C800AF-1941-1816-6A74-CFB825C57A1B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.13958752495735882 1.1861037116230859 1000.1006604825436 ;
+	setAttr ".t" -type "double3" 0.01680323591581441 1.4267011359339266 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "710E1007-DB4F-CC44-5A94-CD803DAA03C3";
+	rename -uid "642AEF4C-7046-1CF3-CB28-06B61F5D8E38";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1006605369365;
-	setAttr ".ow" 0.7606273454772422;
+	setAttr ".coi" 1000.1;
+	setAttr ".ow" 1.4557534034617059;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" -2.7196430635312296e-08 1.1493901078062114 -5.4392861270624593e-08 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "1FAABB72-2A40-FA5E-C77C-FF9504EBC090";
+	rename -uid "EC284844-C84E-47BB-4B56-CF82F273DD45";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 0 0 ;
+	setAttr ".t" -type "double3" 1000.1 1.1003641683004379 -3.9782396853938962 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "5E870DA8-0F40-5B43-017C-F68161B97FE0";
+	rename -uid "584B9F74-D747-5CB3-3ED1-D7B105357F0A";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 19.933520125750245;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "YoungSamLatest_YoungSam";
+createNode transform -n "FoxGirl_Latest:YoungSamLatest_YoungSam";
 	rename -uid "CECFFA94-2A4B-7073-BA5C-7891129EC053";
-createNode transform -n "YoungSamLatest_persp1" -p "YoungSamLatest_YoungSam";
+createNode transform -n "FoxGirl_Latest:YoungSamLatest_persp1" -p "FoxGirl_Latest:YoungSamLatest_YoungSam";
 	rename -uid "CE13717F-CA4B-A0B7-942B-3AB546C01388";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.07372786098118804 1.602972033556668 1.8756049904496899 ;
-	setAttr ".r" -type "double3" -19.538352729597285 0.2000000000012449 8.0756763206871826e-16 ;
-createNode camera -n "YoungSamLatest_perspShape1" -p "YoungSamLatest_persp1";
+	setAttr ".t" -type "double3" 0.85742797819804517 0.88094612000178207 3.0311793640209133 ;
+	setAttr ".r" -type "double3" -3.3383527295973807 16.200000000001271 1.0350201743300079e-16 ;
+createNode camera -n "FoxGirl_Latest:YoungSamLatest_perspShape1" -p "FoxGirl_Latest:YoungSamLatest_persp1";
 	rename -uid "F4FE0B74-BA4C-D2A1-0FE4-068C502BB12D";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 2.2684045867299689;
+	setAttr ".coi" 3.2856476920061715;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
 	setAttr ".tp" -type "double3" 2.7755575615628914e-17 1.279094039802205 -5.9604644775390625e-08 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
-createNode transform -n "Human_Latest:master_control" -p "YoungSamLatest_YoungSam";
+createNode transform -n "FoxGirl_Latest:Human_Latest:master_control" -p "FoxGirl_Latest:YoungSamLatest_YoungSam";
 	rename -uid "310165F3-BA49-7FF3-943C-399ED79CD490";
-createNode nurbsCurve -n "Human_Latest:master_controlShape" -p "Human_Latest:master_control";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:master_controlShape" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "357FFE0A-094D-A778-0068-89A145C88CCF";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -128,11 +120,11 @@ createNode nurbsCurve -n "Human_Latest:master_controlShape" -p "Human_Latest:mas
 		-3.9692881737599587e-17 0.18575502469094882 -0.34791447646567564
 		-0.24601268558184669 1.5063932397372641e-17 -0.24601268558184669
 		;
-createNode transform -n "Human_Latest:waist" -p "Human_Latest:master_control";
+createNode transform -n "FoxGirl_Latest:Human_Latest:waist" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "24D4BADF-A143-CB00-8FA6-B295FA84927F";
 	setAttr ".rp" -type "double3" -0.00088752771262079477 0.49157959222793579 0 ;
 	setAttr ".sp" -type "double3" -0.00088752771262079477 0.49157959222793579 0 ;
-createNode nurbsCurve -n "Human_Latest:waistShape" -p "Human_Latest:waist";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:waistShape" -p "FoxGirl_Latest:Human_Latest:waist";
 	rename -uid "279FEFF6-2D4B-0E16-5BF5-4D8B524A01A7";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -151,11 +143,11 @@ createNode nurbsCurve -n "Human_Latest:waistShape" -p "Human_Latest:waist";
 		-0.00088752771262082069 0.49157959222793579 -0.22672431562836493
 		-0.16120582875331674 0.49157959222793579 -0.16031830104069594
 		;
-createNode transform -n "Human_Latest:back" -p "Human_Latest:waist";
+createNode transform -n "FoxGirl_Latest:Human_Latest:back" -p "FoxGirl_Latest:Human_Latest:waist";
 	rename -uid "44C586A6-2445-0501-EEB3-D7A6C86ED72B";
 	setAttr ".rp" -type "double3" -0.00051525473827496171 0.58310955762863159 0 ;
 	setAttr ".sp" -type "double3" -0.00051525473827496171 0.58310955762863159 0 ;
-createNode nurbsCurve -n "Human_Latest:backShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:backShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back";
 	rename -uid "77BE0B3B-1443-EF3A-CE30-809B52AE16C3";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -174,11 +166,11 @@ createNode nurbsCurve -n "Human_Latest:backShape" -p "|YoungSamLatest_YoungSam|H
 		-0.00051525473827498404 0.58310955762863159 -0.19587624657890904
 		-0.1390206769675898 0.58310955762863159 -0.13850542222931483
 		;
-createNode transform -n "Human_Latest:chest" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back";
+createNode transform -n "FoxGirl_Latest:Human_Latest:chest" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back";
 	rename -uid "8301D153-9645-D943-D9FB-0A90EBDF47AB";
 	setAttr ".rp" -type "double3" -0.0018626195378601551 0.7097618579864502 -2.0679515313825692e-25 ;
 	setAttr ".sp" -type "double3" -0.0018626195378601551 0.7097618579864502 -2.0679515313825692e-25 ;
-createNode nurbsCurve -n "Human_Latest:chestShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:chestShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "9AA41DE4-EA4B-C78D-0EAA-F996E533CBF5";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -197,11 +189,11 @@ createNode nurbsCurve -n "Human_Latest:chestShape" -p "|YoungSamLatest_YoungSam|
 		-0.001862619537860177 0.7097618579864502 -0.1921506947350953
 		-0.13773367879475226 0.7097618579864502 -0.13587105925689211
 		;
-createNode transform -n "Human_Latest:neck" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest";
+createNode transform -n "FoxGirl_Latest:Human_Latest:neck" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "D5E0A12D-CF48-C190-E757-1097FC77E0DC";
 	setAttr ".rp" -type "double3" -0.00051525473827496171 0.81889837980270386 -3.7375838535247397e-11 ;
 	setAttr ".sp" -type "double3" -0.00051525473827496171 0.81889837980270386 -3.7375838535247397e-11 ;
-createNode nurbsCurve -n "Human_Latest:neckShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:neckShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck";
 	rename -uid "A7330754-F040-2899-0652-F993D7CB043B";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -220,11 +212,11 @@ createNode nurbsCurve -n "Human_Latest:neckShape" -p "|YoungSamLatest_YoungSam|H
 		-0.00051525473827497852 0.81889837980270386 -0.14729808878254458
 		-0.10467073214580164 0.81889837980270386 -0.10415547744490251
 		;
-createNode transform -n "Human_Latest:right_shoulder" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest";
+createNode transform -n "FoxGirl_Latest:Human_Latest:right_shoulder" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "E780F503-384C-D590-9DDB-E8846F64C20C";
 	setAttr ".rp" -type "double3" 0.11742661148309708 0.69762605428695679 3.6512082420003811e-12 ;
 	setAttr ".sp" -type "double3" 0.11742661148309708 0.69762605428695679 3.6512082420003811e-12 ;
-createNode nurbsCurve -n "Human_Latest:right_shoulderShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:right_shoulderShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder";
 	rename -uid "0B599DC2-7A4A-0CD2-EA74-088C9F52A3FC";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -243,11 +235,11 @@ createNode nurbsCurve -n "Human_Latest:right_shoulderShape" -p "|YoungSamLatest_
 		0.11742661148309708 0.69762605428695679 -0.14855670267557497
 		0.14512560261723143 0.59629830465432576 -0.10504545185154338
 		;
-createNode transform -n "Human_Latest:right_elbow" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder";
+createNode transform -n "FoxGirl_Latest:Human_Latest:right_elbow" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder";
 	rename -uid "9AB59DA6-3F43-B795-742E-609CA9EDC0D2";
 	setAttr ".rp" -type "double3" 0.2396382987499239 0.64874136447906516 3.6512082420003811e-12 ;
 	setAttr ".sp" -type "double3" 0.2396382987499239 0.64874136447906516 3.6512082420003811e-12 ;
-createNode nurbsCurve -n "Human_Latest:right_elbowShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:right_elbowShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow";
 	rename -uid "0B38F2DD-6142-0EB5-65CE-F69F5BAB0223";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -266,11 +258,11 @@ createNode nurbsCurve -n "Human_Latest:right_elbowShape" -p "|YoungSamLatest_You
 		0.23963829874992379 0.64874136447906516 -0.084299387592850925
 		0.22426144076534699 0.59115017059410735 -0.059608668615708564
 		;
-createNode transform -n "Human_Latest:right_wrist" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow";
+createNode transform -n "FoxGirl_Latest:Human_Latest:right_wrist" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow";
 	rename -uid "0272FF4D-7449-3E42-9DE9-429014AAAE15";
 	setAttr ".rp" -type "double3" 0.33421951532363892 0.60198211669921875 -2.3922225311778789e-10 ;
 	setAttr ".sp" -type "double3" 0.33421951532363892 0.60198211669921875 -2.3922225311778789e-10 ;
-createNode nurbsCurve -n "Human_Latest:right_wristShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:right_wristShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist";
 	rename -uid "97451BF8-8C4B-FF1E-3C72-7FB98DCC227A";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -289,11 +281,11 @@ createNode nurbsCurve -n "Human_Latest:right_wristShape" -p "|YoungSamLatest_You
 		0.33421951532363892 0.60198211669921842 -0.071654886145725294
 		0.31933314130897311 0.55355064753058314 -0.050667655968858916
 		;
-createNode transform -n "Human_Latest:left_shoulder" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest";
+createNode transform -n "FoxGirl_Latest:Human_Latest:left_shoulder" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "4A8090F2-0049-B4B1-9848-7EAB750A0616";
 	setAttr ".rp" -type "double3" -0.12115199863910682 0.69762599468231168 4.6597864455932836e-12 ;
 	setAttr ".sp" -type "double3" -0.12115199863910682 0.69762599468231168 4.6597864455932836e-12 ;
-createNode nurbsCurve -n "Human_Latest:left_shoulderShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:left_shoulderShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder";
 	rename -uid "0F02F05D-CE48-924E-6684-26869AD26D23";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -312,11 +304,11 @@ createNode nurbsCurve -n "Human_Latest:left_shoulderShape" -p "|YoungSamLatest_Y
 		-0.12115199863910674 0.69762599468231201 -0.14446389838689339
 		-0.098247108583497028 0.79717635872375048 -0.10215140218465181
 		;
-createNode transform -n "Human_Latest:left_elbow" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder";
+createNode transform -n "FoxGirl_Latest:Human_Latest:left_elbow" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder";
 	rename -uid "295D4C2D-9149-876F-EC7D-56A357C559C2";
 	setAttr ".rp" -type "double3" -0.24336400628089913 0.64874100685119618 4.6598454261914668e-12 ;
 	setAttr ".sp" -type "double3" -0.24336400628089913 0.64874100685119618 4.6598454261914668e-12 ;
-createNode nurbsCurve -n "Human_Latest:left_elbowShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:left_elbowShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow";
 	rename -uid "13E3D7A9-D74B-C609-BA4C-55A465E0F674";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -335,11 +327,11 @@ createNode nurbsCurve -n "Human_Latest:left_elbowShape" -p "|YoungSamLatest_Youn
 		-0.24336400628089894 0.64874100685119584 -0.088330361119633855
 		-0.26335552850190808 0.70791418817061591 -0.062458997330984811
 		;
-createNode transform -n "Human_Latest:left_wrist" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow";
+createNode transform -n "FoxGirl_Latest:Human_Latest:left_wrist" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow";
 	rename -uid "2022273D-B942-8AD9-5D31-2DBFA27D0861";
 	setAttr ".rp" -type "double3" -0.33794501423835754 0.6019819974899292 -3.639586132475614e-10 ;
 	setAttr ".sp" -type "double3" -0.33794501423835754 0.6019819974899292 -3.639586132475614e-10 ;
-createNode nurbsCurve -n "Human_Latest:left_wristShape" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:left_wristShape" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist";
 	rename -uid "5D4816E3-9645-C3C9-C668-F49225638CF6";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -358,11 +350,11 @@ createNode nurbsCurve -n "Human_Latest:left_wristShape" -p "|YoungSamLatest_Youn
 		-0.33794501423835754 0.6019819974899292 -0.072042119976439528
 		-0.3575754848842625 0.64898921099328166 -0.05094147167299623
 		;
-createNode transform -n "Human_Latest:right_foot" -p "Human_Latest:master_control";
+createNode transform -n "FoxGirl_Latest:Human_Latest:right_foot" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "50FD1CBA-EC4E-A37D-7688-A4BE8BAC8C77";
 	setAttr ".rp" -type "double3" 0.089758187532424927 0.023953119292855263 0 ;
 	setAttr ".sp" -type "double3" 0.089758187532424927 0.023953119292855263 0 ;
-createNode nurbsCurve -n "Human_Latest:right_footShape" -p "Human_Latest:right_foot";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:right_footShape" -p "FoxGirl_Latest:Human_Latest:right_foot";
 	rename -uid "0A9F4A81-9442-274B-1F94-618381BE7B11";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -381,12 +373,12 @@ createNode nurbsCurve -n "Human_Latest:right_footShape" -p "Human_Latest:right_f
 		0.089758187532424913 0.096887982655254709 -0.089920339629083093
 		0.026174905614102864 0.023953119292855266 -0.063583281918322063
 		;
-createNode ikHandle -n "Human_Latest:right_leg_ikHandle1" -p "Human_Latest:right_foot";
+createNode ikHandle -n "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1" -p "FoxGirl_Latest:Human_Latest:right_foot";
 	rename -uid "C6A95232-1D46-0363-2A56-2FB4AE7B236B";
 	setAttr ".t" -type "double3" 0.089758190637316729 0.023953118838885401 0 ;
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1" 
-		-p "Human_Latest:right_leg_ikHandle1";
+createNode poleVectorConstraint -n "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1" 
+		-p "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1";
 	rename -uid "1DC6890C-8D40-17DF-8F07-2E90229CCB35";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "leftLegPoleVectorW0" -dv 1 -min 0 
 		-at "double";
@@ -404,11 +396,11 @@ createNode poleVectorConstraint -n "YoungSamLatest_right_leg_ikHandle1_poleVecto
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -3.1048917326081948e-09 -0.20345209996639102 0.35093203442234389 ;
 	setAttr -k on ".w0";
-createNode transform -n "Human_Latest:left_foot" -p "Human_Latest:master_control";
+createNode transform -n "FoxGirl_Latest:Human_Latest:left_foot" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "4B3D93A2-1A45-B5C3-F9B1-419764238E2B";
 	setAttr ".rp" -type "double3" -0.091533198952674866 0.02395310066640377 -3.6050773394468099e-33 ;
 	setAttr ".sp" -type "double3" -0.091533198952674866 0.02395310066640377 -3.6050773394468099e-33 ;
-createNode nurbsCurve -n "Human_Latest:left_footShape" -p "Human_Latest:left_foot";
+createNode nurbsCurve -n "FoxGirl_Latest:Human_Latest:left_footShape" -p "FoxGirl_Latest:Human_Latest:left_foot";
 	rename -uid "0B8F46D7-CA4F-C8E5-7D72-AD834E684260";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -427,12 +419,12 @@ createNode nurbsCurve -n "Human_Latest:left_footShape" -p "Human_Latest:left_foo
 		-0.09153319895267488 0.096887964028803203 -0.089920339629083093
 		-0.15511648087099694 0.023953100666403774 -0.063583281918322063
 		;
-createNode ikHandle -n "Human_Latest:left_leg_ikHandle2" -p "Human_Latest:left_foot";
+createNode ikHandle -n "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2" -p "FoxGirl_Latest:Human_Latest:left_foot";
 	rename -uid "4CA37302-6547-3D8B-502E-A4B4D38A9B10";
 	setAttr ".t" -type "double3" -0.091533199999999995 0.023953100000000005 0 ;
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1" 
-		-p "Human_Latest:left_leg_ikHandle2";
+createNode poleVectorConstraint -n "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1" 
+		-p "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2";
 	rename -uid "090A287C-474D-C1FD-65AD-EFA29AB8342D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "rightLegPoleVectorW0" -dv 1 -min 
 		0 -at "double";
@@ -450,7 +442,7 @@ createNode poleVectorConstraint -n "YoungSamLatest_left_leg_ikHandle2_poleVector
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 1.0473251155218577e-09 -0.20345187576866142 0.35093203442234389 ;
 	setAttr -k on ".w0";
-createNode joint -n "Human_Latest:torso" -p "Human_Latest:master_control";
+createNode joint -n "FoxGirl_Latest:Human_Latest:torso" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "5D35DBB8-E949-2540-CA95-0EA2FEDD07AE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -459,7 +451,7 @@ createNode joint -n "Human_Latest:torso" -p "Human_Latest:master_control";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.00088752772401010441 0.49157958512284738 0 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:thigh_right" -p "Human_Latest:torso";
+createNode joint -n "FoxGirl_Latest:Human_Latest:thigh_right" -p "FoxGirl_Latest:Human_Latest:torso";
 	rename -uid "8A9DE457-3A46-B5A9-356C-8BA41E563FFD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -471,7 +463,7 @@ createNode joint -n "Human_Latest:thigh_right" -p "Human_Latest:torso";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.089758190637316659 0.44163622419772952 0 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:knee_right" -p "Human_Latest:thigh_right";
+createNode joint -n "FoxGirl_Latest:Human_Latest:knee_right" -p "FoxGirl_Latest:Human_Latest:thigh_right";
 	rename -uid "6AF50965-6A4D-4AEB-1885-43BF46A513AE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -482,7 +474,7 @@ createNode joint -n "Human_Latest:knee_right" -p "Human_Latest:thigh_right";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.089758190637316687 0.23818413094229257 0.0052196649911927032 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:foot_right" -p "Human_Latest:knee_right";
+createNode joint -n "FoxGirl_Latest:Human_Latest:foot_right" -p "FoxGirl_Latest:Human_Latest:knee_right";
 	rename -uid "D589194A-9944-0B5A-7382-2FAB64374C31";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -493,11 +485,11 @@ createNode joint -n "Human_Latest:foot_right" -p "Human_Latest:knee_right";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.089758190637316729 0.023953118838885401 0 1;
 	setAttr ".radi" 0.5;
-createNode ikEffector -n "Human_Latest:effector1" -p "Human_Latest:knee_right";
+createNode ikEffector -n "FoxGirl_Latest:Human_Latest:effector1" -p "FoxGirl_Latest:Human_Latest:knee_right";
 	rename -uid "2B0A1057-734B-E57E-D9C6-29952C355205";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode joint -n "Human_Latest:back" -p "Human_Latest:torso";
+createNode joint -n "FoxGirl_Latest:Human_Latest:back" -p "FoxGirl_Latest:Human_Latest:torso";
 	rename -uid "A72F3DC8-804B-B9E4-BA28-D0A55D9682AF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -507,7 +499,7 @@ createNode joint -n "Human_Latest:back" -p "Human_Latest:torso";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.00051525471443342533 0.5831095340773379 0 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:chest" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back";
+createNode joint -n "FoxGirl_Latest:Human_Latest:chest" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back";
 	rename -uid "32CF5D69-6A4E-8348-BF52-5187BB8C922A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -517,7 +509,7 @@ createNode joint -n "Human_Latest:chest" -p "|YoungSamLatest_YoungSam|Human_Late
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.0018626195704297217 0.70976183054098718 -2.0679515653733457e-25 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:neck" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest";
+createNode joint -n "FoxGirl_Latest:Human_Latest:neck" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "A86EAF02-7C42-96F1-17D1-17836D6352BC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -527,7 +519,7 @@ createNode joint -n "Human_Latest:neck" -p "|YoungSamLatest_YoungSam|Human_Lates
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.00051525471443343226 0.81889838387668523 -3.7375839206567659e-11 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:head" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck";
+createNode joint -n "FoxGirl_Latest:Human_Latest:head" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck";
 	rename -uid "35BB3C58-6640-F014-54CE-28B844752926";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -538,7 +530,8 @@ createNode joint -n "Human_Latest:head" -p "|YoungSamLatest_YoungSam|Human_Lates
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.00083211014156256858 1.3632337856991779 -6.3660419773244319e-11 1;
 	setAttr ".radi" 0.5;
-createNode parentConstraint -n "Human_Latest:neck_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:neck_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck";
 	rename -uid "5F20038F-4540-F02C-03CA-80BF2DC5D359";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "neckW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -557,7 +550,7 @@ createNode parentConstraint -n "Human_Latest:neck_parentConstraint1" -p "|YoungS
 		-6.713202623931113e-19 ;
 	setAttr ".rst" -type "double3" 0.0013473648559962895 0.10913655333569805 -3.7375839206567452e-11 ;
 	setAttr -k on ".w0";
-createNode joint -n "Human_Latest:right_shoulder" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest";
+createNode joint -n "FoxGirl_Latest:Human_Latest:right_shoulder" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "3A8D4992-724B-901B-9701-C3A0E6F0FDA7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -567,7 +560,7 @@ createNode joint -n "Human_Latest:right_shoulder" -p "|YoungSamLatest_YoungSam|H
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.11742661260974718 0.69762605835211899 3.6512083179035081e-12 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:right_elbow" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder";
+createNode joint -n "FoxGirl_Latest:Human_Latest:right_elbow" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder";
 	rename -uid "D97AECD3-5540-829F-597B-A89998B07176";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -577,7 +570,7 @@ createNode joint -n "Human_Latest:right_elbow" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.23963829813954979 0.64874138414019789 3.651208317903378e-12 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:right_wrist" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow";
+createNode joint -n "FoxGirl_Latest:Human_Latest:right_wrist" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow";
 	rename -uid "2D243160-BE4E-A745-E33A-788358D172D2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -587,7 +580,7 @@ createNode joint -n "Human_Latest:right_wrist" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.33421951563652735 0.60198213054618677 -2.3922225328695656e-10 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:right_hand" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist";
+createNode joint -n "FoxGirl_Latest:Human_Latest:right_hand" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist";
 	rename -uid "0D848658-AD47-E772-E76F-669DF50CD404";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -598,7 +591,8 @@ createNode joint -n "Human_Latest:right_hand" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.37672792799471949 0.58179063467604542 -3.2596277528870184e-10 1;
 	setAttr ".radi" 0.5;
-createNode parentConstraint -n "Human_Latest:right_wrist_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist";
 	rename -uid "D387B106-644C-06F2-0906-05A70AF13E4D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "right_wristW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -617,7 +611,8 @@ createNode parentConstraint -n "Human_Latest:right_wrist_parentConstraint1" -p "
 		-1.691686716271745e-19 ;
 	setAttr ".rst" -type "double3" 0.094581217496977565 -0.046759253594011119 -2.4287346160485991e-10 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Human_Latest:right_elbow_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow";
 	rename -uid "2F58A282-1E4E-D618-9425-52B1D3545765";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "right_elbowW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -636,8 +631,8 @@ createNode parentConstraint -n "Human_Latest:right_elbow_parentConstraint1" -p "
 		7.5902996928867232e-20 ;
 	setAttr ".rst" -type "double3" 0.12221168552980261 -0.048884674211921109 -1.3005476427835689e-25 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Human_Latest:right_shoulder_parentConstraint1" -p
-		 "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder";
 	rename -uid "DDC892A8-1140-AAD4-BC0B-74A5B556A855";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "right_shoulderW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -656,7 +651,7 @@ createNode parentConstraint -n "Human_Latest:right_shoulder_parentConstraint1" -
 		7.5903126983631511e-20 ;
 	setAttr ".rst" -type "double3" 0.11928923218017691 -0.012135772188868188 3.6512083179037149e-12 ;
 	setAttr -k on ".w0";
-createNode joint -n "Human_Latest:left_shoulder" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest";
+createNode joint -n "FoxGirl_Latest:Human_Latest:left_shoulder" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "1F6EB8EA-E949-91E3-A568-3CA37BE6E63B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -666,7 +661,7 @@ createNode joint -n "Human_Latest:left_shoulder" -p "|YoungSamLatest_YoungSam|Hu
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.12115199999999994 0.69762599999999964 4.6597866273871095e-12 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:left_elbow" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder";
+createNode joint -n "FoxGirl_Latest:Human_Latest:left_elbow" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder";
 	rename -uid "31BE83CA-0A48-DF98-AD59-A1A11A992110";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -676,7 +671,7 @@ createNode joint -n "Human_Latest:left_elbow" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.24336399999999983 0.64874099999999968 4.6598453731498211e-12 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:left_wrist" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow";
+createNode joint -n "FoxGirl_Latest:Human_Latest:left_wrist" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow";
 	rename -uid "F88A903B-AC4F-04A2-F7E4-198928BC30B4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -686,7 +681,7 @@ createNode joint -n "Human_Latest:left_wrist" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.33794499999999983 0.6019819999999998 -3.6395861880388175e-10 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:left_hand" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist";
+createNode joint -n "FoxGirl_Latest:Human_Latest:left_hand" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist";
 	rename -uid "669BD046-5B4D-0BB9-B724-63BE703A1484";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -697,7 +692,8 @@ createNode joint -n "Human_Latest:left_hand" -p "|YoungSamLatest_YoungSam|Human_
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.38045299999999982 0.58179099999999984 -4.9560687248411729e-10 1;
 	setAttr ".radi" 0.5;
-createNode parentConstraint -n "Human_Latest:left_wrist_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist";
 	rename -uid "67B3B08D-0640-1C52-C5AB-A18BB341CA42";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "left_wristW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -716,7 +712,8 @@ createNode parentConstraint -n "Human_Latest:left_wrist_parentConstraint1" -p "|
 		-5.5563203432459105e-18 ;
 	setAttr ".rst" -type "double3" -0.094581 -0.046758999999999884 -3.6861846417703155e-10 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Human_Latest:left_elbow_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow";
 	rename -uid "138655CB-E341-3E23-A045-59A1524B1000";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "left_elbowW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -735,7 +732,8 @@ createNode parentConstraint -n "Human_Latest:left_elbow_parentConstraint1" -p "|
 		-5.3041645731003746e-20 ;
 	setAttr ".rst" -type "double3" -0.12221199999999989 -0.048884999999999956 5.8745762711561443e-17 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Human_Latest:left_shoulder_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder";
 	rename -uid "714D799F-0347-2862-BCA8-5992EF6B6975";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "left_shoulderW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -754,7 +752,8 @@ createNode parentConstraint -n "Human_Latest:left_shoulder_parentConstraint1" -p
 		1.817938259189948e-19 ;
 	setAttr ".rst" -type "double3" -0.11928938042957021 -0.012135830540987547 4.6597866273873163e-12 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Human_Latest:chest_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:chest_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest";
 	rename -uid "DF6DDB04-9149-A342-6F46-749AFEF0A1B9";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "chestW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -773,7 +772,8 @@ createNode parentConstraint -n "Human_Latest:chest_parentConstraint1" -p "|Young
 		-3.3990776482659658e-33 ;
 	setAttr ".rst" -type "double3" -0.0013473648559962964 0.12665229646364928 -2.0679515653733457e-25 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Human_Latest:back_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:back_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back";
 	rename -uid "036F9692-5E48-0840-8135-E7AE068DD648";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "backW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -792,7 +792,7 @@ createNode parentConstraint -n "Human_Latest:back_parentConstraint1" -p "|YoungS
 		0 ;
 	setAttr ".rst" -type "double3" 0.00037227300957667908 0.091529948954490514 0 ;
 	setAttr -k on ".w0";
-createNode joint -n "Human_Latest:thigh_left" -p "Human_Latest:torso";
+createNode joint -n "FoxGirl_Latest:Human_Latest:thigh_left" -p "FoxGirl_Latest:Human_Latest:torso";
 	rename -uid "599CD4EC-7342-707A-EC1C-B29E31FA3636";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -804,7 +804,7 @@ createNode joint -n "Human_Latest:thigh_left" -p "Human_Latest:torso";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.091533199999999981 0.44163599999999992 0 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:knee_left" -p "Human_Latest:thigh_left";
+createNode joint -n "FoxGirl_Latest:Human_Latest:knee_left" -p "FoxGirl_Latest:Human_Latest:thigh_left";
 	rename -uid "C88D56DA-AC42-16B2-1F36-9780E3DFB101";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -815,7 +815,7 @@ createNode joint -n "Human_Latest:knee_left" -p "Human_Latest:thigh_left";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.091533200000000009 0.23818400000000001 0.0052196649911927032 1;
 	setAttr ".radi" 0.5;
-createNode joint -n "Human_Latest:foot_left" -p "Human_Latest:knee_left";
+createNode joint -n "FoxGirl_Latest:Human_Latest:foot_left" -p "FoxGirl_Latest:Human_Latest:knee_left";
 	rename -uid "9B8F5A22-4541-C169-FCC2-42A5BC5888DE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -826,11 +826,12 @@ createNode joint -n "Human_Latest:foot_left" -p "Human_Latest:knee_left";
 	setAttr ".jot" -type "string" "none";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.091533199999999995 0.023953100000000005 0 1;
 	setAttr ".radi" 0.5;
-createNode ikEffector -n "Human_Latest:effector2" -p "Human_Latest:knee_left";
+createNode ikEffector -n "FoxGirl_Latest:Human_Latest:effector2" -p "FoxGirl_Latest:Human_Latest:knee_left";
 	rename -uid "8F16D578-8948-BE5B-1B03-A18EA16FC8A3";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode parentConstraint -n "Human_Latest:torso_parentConstraint1" -p "Human_Latest:torso";
+createNode parentConstraint -n "FoxGirl_Latest:Human_Latest:torso_parentConstraint1" 
+		-p "FoxGirl_Latest:Human_Latest:torso";
 	rename -uid "2B8EF0DC-2041-4517-B16B-E68531E11AA1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "waistW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -849,17 +850,17 @@ createNode parentConstraint -n "Human_Latest:torso_parentConstraint1" -p "Human_
 		0 ;
 	setAttr ".rst" -type "double3" -0.00088752772401010441 0.49157958512284738 0 ;
 	setAttr -k on ".w0";
-createNode transform -n "Human_Latest:head" -p "Human_Latest:master_control";
+createNode transform -n "FoxGirl_Latest:Human_Latest:head" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "EC234FB5-6C45-5793-C759-E6B56BB3E201";
 	setAttr ".rp" -type "double3" 0 0.8365448647314575 0.0052013680654191541 ;
 	setAttr ".sp" -type "double3" 0 0.8365448647314575 0.0052013680654191541 ;
-createNode transform -n "Human_Latest:headBase" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Human_Latest:headBase" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "4CE24D91-0846-DF8A-DA14-7BA6B56CE1B3";
-createNode transform -n "Human_Latest:polySurface4" -p "Human_Latest:headBase";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface4" -p "FoxGirl_Latest:Human_Latest:headBase";
 	rename -uid "3F2425A7-0748-6136-0F1E-3BA94E388D72";
 	setAttr ".t" -type "double3" 0 1.1274918907925005 0 ;
 	setAttr ".r" -type "double3" 0 0 89.999999999999986 ;
-createNode mesh -n "Human_Latest:polySurfaceShape4" -p "Human_Latest:polySurface4";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape4" -p "FoxGirl_Latest:Human_Latest:polySurface4";
 	rename -uid "D2B14F6E-4046-E9AD-B0F1-49B8A7C2FAF8";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1286,11 +1287,11 @@ createNode mesh -n "Human_Latest:polySurfaceShape4" -p "Human_Latest:polySurface
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface5" -p "Human_Latest:headBase";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface5" -p "FoxGirl_Latest:Human_Latest:headBase";
 	rename -uid "EBAFFB28-D949-DF25-4E04-489BF2DDD162";
 	setAttr ".t" -type "double3" 0 1.1274918907925005 0 ;
 	setAttr ".r" -type "double3" 0 0 89.999999999999986 ;
-createNode mesh -n "Human_Latest:polySurfaceShape5" -p "Human_Latest:polySurface5";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape5" -p "FoxGirl_Latest:Human_Latest:polySurface5";
 	rename -uid "7A3F160E-6E49-C1FE-DF9E-658E87458B03";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1715,11 +1716,11 @@ createNode mesh -n "Human_Latest:polySurfaceShape5" -p "Human_Latest:polySurface
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface3" -p "Human_Latest:headBase";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface3" -p "FoxGirl_Latest:Human_Latest:headBase";
 	rename -uid "0F6AC014-3747-C633-311D-D5844B113270";
 	setAttr ".t" -type "double3" 0 1.1274918907925005 0 ;
 	setAttr ".r" -type "double3" 0 0 89.999999999999986 ;
-createNode mesh -n "Human_Latest:polySurfaceShape9" -p "Human_Latest:polySurface3";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape9" -p "FoxGirl_Latest:Human_Latest:polySurface3";
 	rename -uid "999859C5-0940-A1F8-957A-B8ABC9EFBC84";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1909,9 +1910,9 @@ createNode mesh -n "Human_Latest:polySurfaceShape9" -p "Human_Latest:polySurface
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface8" -p "Human_Latest:polySurface3";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface8" -p "FoxGirl_Latest:Human_Latest:polySurface3";
 	rename -uid "7378AF90-9246-BF48-E0BD-8A9BD65CEE56";
-createNode mesh -n "Human_Latest:polySurfaceShape10" -p "Human_Latest:polySurface8";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape10" -p "FoxGirl_Latest:Human_Latest:polySurface8";
 	rename -uid "EF105F35-EB41-700E-F31F-84AB3613D221";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
@@ -1934,9 +1935,9 @@ createNode mesh -n "Human_Latest:polySurfaceShape10" -p "Human_Latest:polySurfac
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface9" -p "Human_Latest:polySurface3";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface9" -p "FoxGirl_Latest:Human_Latest:polySurface3";
 	rename -uid "61070104-074C-1BF2-7546-18A24F72A635";
-createNode mesh -n "Human_Latest:polySurfaceShape11" -p "Human_Latest:polySurface9";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape11" -p "FoxGirl_Latest:Human_Latest:polySurface9";
 	rename -uid "24723B0B-7847-5519-0E8A-84BA969C2637";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
@@ -1958,10 +1959,10 @@ createNode mesh -n "Human_Latest:polySurfaceShape11" -p "Human_Latest:polySurfac
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:transform2" -p "Human_Latest:polySurface3";
+createNode transform -n "FoxGirl_Latest:Human_Latest:transform2" -p "FoxGirl_Latest:Human_Latest:polySurface3";
 	rename -uid "B8203BC6-FD48-C072-CB53-3EBA579DFBAC";
 	setAttr ".v" no;
-createNode mesh -n "Human_Latest:polySurfaceShape3" -p "Human_Latest:transform2";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape3" -p "FoxGirl_Latest:Human_Latest:transform2";
 	rename -uid "E2BB230D-2843-E1F2-E92B-8086CEAE294F";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1975,11 +1976,11 @@ createNode mesh -n "Human_Latest:polySurfaceShape3" -p "Human_Latest:transform2"
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface1" -p "Human_Latest:headBase";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface1" -p "FoxGirl_Latest:Human_Latest:headBase";
 	rename -uid "0E83D5BA-4B49-702F-3000-43BC1CFD14FA";
 	setAttr ".t" -type "double3" 0 1.1274918907925005 0 ;
 	setAttr ".r" -type "double3" 0 0 89.999999999999986 ;
-createNode mesh -n "Human_Latest:polySurfaceShape6" -p "Human_Latest:polySurface1";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape6" -p "FoxGirl_Latest:Human_Latest:polySurface1";
 	rename -uid "4B4D0C7A-1042-0FB6-F154-7FA79B5C3A22";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -2168,9 +2169,9 @@ createNode mesh -n "Human_Latest:polySurfaceShape6" -p "Human_Latest:polySurface
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface6" -p "Human_Latest:polySurface1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface6" -p "FoxGirl_Latest:Human_Latest:polySurface1";
 	rename -uid "967A0A90-1F46-7EE5-0E3E-C5932AF436C1";
-createNode mesh -n "Human_Latest:polySurfaceShape7" -p "Human_Latest:polySurface6";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape7" -p "FoxGirl_Latest:Human_Latest:polySurface6";
 	rename -uid "2D675280-3D4D-888B-935D-8A8FC043970C";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
@@ -2192,9 +2193,9 @@ createNode mesh -n "Human_Latest:polySurfaceShape7" -p "Human_Latest:polySurface
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:polySurface7" -p "Human_Latest:polySurface1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:polySurface7" -p "FoxGirl_Latest:Human_Latest:polySurface1";
 	rename -uid "5E302D6E-624F-C154-28E1-BF9ACC75CBC1";
-createNode mesh -n "Human_Latest:polySurfaceShape8" -p "Human_Latest:polySurface7";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape8" -p "FoxGirl_Latest:Human_Latest:polySurface7";
 	rename -uid "11D5ABB2-794C-D964-B8FF-9694AD867CDB";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
@@ -2217,10 +2218,10 @@ createNode mesh -n "Human_Latest:polySurfaceShape8" -p "Human_Latest:polySurface
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:transform1" -p "Human_Latest:polySurface1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:transform1" -p "FoxGirl_Latest:Human_Latest:polySurface1";
 	rename -uid "D74826BC-7644-7368-831B-C3AFD1F0598A";
 	setAttr ".v" no;
-createNode mesh -n "Human_Latest:polySurfaceShape1" -p "Human_Latest:transform1";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:polySurfaceShape1" -p "FoxGirl_Latest:Human_Latest:transform1";
 	rename -uid "6BCACFA1-4746-9926-3ACC-D5B41A569138";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -2234,17 +2235,17 @@ createNode mesh -n "Human_Latest:polySurfaceShape1" -p "Human_Latest:transform1"
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:hairGuides" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Human_Latest:hairGuides" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "D041FBFA-F444-85FE-6047-4989433B95B5";
 	setAttr ".r" -type "double3" -27.579232589797513 0 0 ;
 	setAttr ".rp" -type "double3" 0.30320429801940918 1.12749183177948 1.4135241156026686e-17 ;
 	setAttr ".sp" -type "double3" 0.30320429801940918 1.12749183177948 1.4135241156026686e-17 ;
-createNode transform -n "Human_Latest:pCube13" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube13" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "17577894-7640-AC03-5BCE-ADB49563D034";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.21439781785011292 1.12749183177948 0.21439783275127411 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape13" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube13";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape13" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube13";
 	rename -uid "D38714F5-5B48-B0DB-E7D4-83BB2FF74E38";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2283,12 +2284,12 @@ createNode mesh -n "Human_Latest:pCubeShape13" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube12" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube12" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "949A4ACD-CD47-D1DC-B369-169FCF87F64B";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.21439781785011292 1.12749183177948 0.21439783275127411 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape12" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube12";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape12" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube12";
 	rename -uid "7B7EA8F9-CA4E-3AAB-0852-CFB2255DF9A6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2327,12 +2328,12 @@ createNode mesh -n "Human_Latest:pCubeShape12" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube11" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube11" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "6F6B8D2D-A84F-FF18-DD37-F092B4A8A410";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.17821900546550751 1.12749183177948 0.24529746174812317 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape11" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube11";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape11" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube11";
 	rename -uid "B9CD359F-AC42-B114-B4DB-76856DB86F71";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2371,11 +2372,11 @@ createNode mesh -n "Human_Latest:pCubeShape11" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube10" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube10" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "3D8D92CD-6241-CE47-16C6-DE8A83980192";
 	setAttr ".t" -type "double3" -0.12474202363030562 1.13157859041743 0.27229165917712445 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape10" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube10";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape10" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube10";
 	rename -uid "052C758C-0944-FFB1-AA8E-2591D4342145";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2414,12 +2415,12 @@ createNode mesh -n "Human_Latest:pCubeShape10" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube9" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube9" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "2D1440B6-7149-65C9-94FD-D6AE75044B49";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.093695275485515594 1.12749183177948 0.2883644700050354 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape9" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube9";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape9" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube9";
 	rename -uid "58B2292A-0B4F-9C7D-7761-24A183C0EB31";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2458,12 +2459,12 @@ createNode mesh -n "Human_Latest:pCubeShape9" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube8" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube8" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "8073D0CC-474F-CABF-D2A5-DDB8C835D60C";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.047431573271751404 1.12749183177948 0.29947137832641602 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape8" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube8";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape8" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube8";
 	rename -uid "D22C02C0-8C40-190B-BCA0-F4BADB0A23D1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2502,12 +2503,12 @@ createNode mesh -n "Human_Latest:pCubeShape8" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube7" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube7" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "E07F4551-0449-4C08-EA9B-CC850217015B";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.17821900546550751 1.12749183177948 0.24529746174812317 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape7" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube7";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape7" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube7";
 	rename -uid "E9C94AF7-D842-0124-E068-C28564BEFA1D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2546,11 +2547,11 @@ createNode mesh -n "Human_Latest:pCubeShape7" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube6" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube6" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "1914E414-4D4C-824D-7283-B29EF1492446";
 	setAttr ".t" -type "double3" 0.12217622811995574 1.13157859041743 0.2722916591771245 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape6" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube6";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape6" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube6";
 	rename -uid "BA0EFAB5-2746-99E6-C28B-A8B33ED4FFE5";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2589,12 +2590,12 @@ createNode mesh -n "Human_Latest:pCubeShape6" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube5" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube5" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "F35EC0BA-344C-E1AD-984C-6594BC043DD5";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.093695275485515594 1.12749183177948 0.2883644700050354 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape5" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube5";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape5" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube5";
 	rename -uid "D7A94F4C-1D4A-7436-E99E-76BF8BE0F095";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2633,12 +2634,12 @@ createNode mesh -n "Human_Latest:pCubeShape5" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube4" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube4" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "B1689AA4-9940-1EE6-6585-8B8285496A56";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.047431573271751404 1.12749183177948 0.29947137832641602 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape4" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube4";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape4" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube4";
 	rename -uid "D02DEA9A-9047-0B8C-5090-90AD1FFAFFBA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2677,11 +2678,11 @@ createNode mesh -n "Human_Latest:pCubeShape4" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube3" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube3" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "75CD0B61-D341-7B0F-3D8C-62A7C4BF9524";
 	setAttr ".t" -type "double3" 0 1.1135410243375621 0.30058395141574656 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape3" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube3";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape3" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube3";
 	rename -uid "6CB2823D-BC4C-F329-4503-91B34FC7EAAE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2720,11 +2721,11 @@ createNode mesh -n "Human_Latest:pCubeShape3" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCube6" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:pCube6" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "9BDB94EC-6D4F-8B95-9AD7-B68D917AFF39";
 	setAttr ".t" -type "double3" 0.21716318128637682 1.166173532263038 0.20605917908849311 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "pCubeShape6" -p "pCube6";
+createNode mesh -n "FoxGirl_Latest:pCubeShape6" -p "FoxGirl_Latest:pCube6";
 	rename -uid "58B858E2-A047-85E4-E2B0-748A67A12C29";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2763,11 +2764,11 @@ createNode mesh -n "pCubeShape6" -p "pCube6";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCube10" -p "Human_Latest:hairGuides";
+createNode transform -n "FoxGirl_Latest:pCube10" -p "FoxGirl_Latest:Human_Latest:hairGuides";
 	rename -uid "29571DEA-F54F-5F6D-84C1-719A62050BDD";
 	setAttr ".t" -type "double3" -0.22836264994707736 1.1728457381706154 0.19328515140279778 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "pCubeShape10" -p "pCube10";
+createNode mesh -n "FoxGirl_Latest:pCubeShape10" -p "FoxGirl_Latest:pCube10";
 	rename -uid "FDF6D5E2-E54E-2086-3E25-89BBB2F42D74";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2806,19 +2807,18 @@ createNode mesh -n "pCubeShape10" -p "pCube10";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:eyeGuidesRow2" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Human_Latest:eyeGuidesRow2" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "A2BDC746-4F43-4E68-0A28-80B891E7B03B";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.0085402300921848529 0.003123559218932731 ;
 	setAttr ".r" -type "double3" 28.256661903434566 0 0 ;
 	setAttr ".rp" -type "double3" 0 1.12749183177948 0.25880108028650284 ;
 	setAttr ".rpt" -type "double3" 0 -0.12252214755864888 -0.030839849997057467 ;
 	setAttr ".sp" -type "double3" 0 1.12749183177948 0.25880108028650284 ;
-createNode transform -n "Human_Latest:pCube13" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube13" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "3F1D2595-D647-0799-406D-ADB7DD21B855";
 	setAttr ".t" -type "double3" 0.21439781785011292 1.0845696117327914 0.21439783275127408 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape13" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube13";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape13" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube13";
 	rename -uid "BF02EC5C-5C40-429A-B280-26B3C7F9A34E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2857,11 +2857,11 @@ createNode mesh -n "Human_Latest:pCubeShape13" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube12" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube12" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "5D948A37-2444-B5FB-F253-C483FC525C59";
 	setAttr ".t" -type "double3" -0.21439781785011292 1.0845696117327914 0.21439783275127408 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape12" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube12";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape12" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube12";
 	rename -uid "1ABFADEB-DF4E-1EA6-011B-BA8D417557F5";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2900,11 +2900,11 @@ createNode mesh -n "Human_Latest:pCubeShape12" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube11" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube11" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "0A619B1B-9740-3275-A985-04A86D4AF202";
 	setAttr ".t" -type "double3" -0.17821900546550751 1.1013197463851576 0.24529746174812314 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape11" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube11";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape11" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube11";
 	rename -uid "9E271401-8947-1012-0BF8-95A19BC9B203";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2943,11 +2943,11 @@ createNode mesh -n "Human_Latest:pCubeShape11" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube10" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube10" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "27792A7E-344C-BE99-A3A0-00B54AB2104E";
 	setAttr ".t" -type "double3" -0.13765187561511993 1.1128354639586595 0.27015703916549683 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape10" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube10";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape10" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube10";
 	rename -uid "A6C453D5-BA4C-2DD1-5858-7C9C4D480B95";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2986,11 +2986,11 @@ createNode mesh -n "Human_Latest:pCubeShape10" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube9" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube9" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "F3998EA0-674F-671B-F38A-429B2C984ED7";
 	setAttr ".t" -type "double3" -0.093695275485515594 1.1212105312848428 0.28836447000503534 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape9" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube9";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape9" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube9";
 	rename -uid "01CD4124-7D4C-73E4-F277-6D83BA421308";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3029,11 +3029,11 @@ createNode mesh -n "Human_Latest:pCubeShape9" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube8" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube8" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "626242AF-5446-2F98-7DFC-819792BDAD96";
 	setAttr ".t" -type "double3" -0.047431573271751404 1.12749183177948 0.29947137832641602 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape8" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube8";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape8" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube8";
 	rename -uid "3C549EC5-7D4C-8E4D-BE49-53B8B475B15A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3072,11 +3072,11 @@ createNode mesh -n "Human_Latest:pCubeShape8" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube7" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube7" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "C07DF313-7A4F-9B5C-4F14-669EBD45FEC2";
 	setAttr ".t" -type "double3" 0.17821900546550751 1.1013197463851576 0.24529746174812314 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape7" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube7";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape7" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube7";
 	rename -uid "1B593B96-DB46-1CE0-2240-7DBE51DFDB3D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3115,11 +3115,11 @@ createNode mesh -n "Human_Latest:pCubeShape7" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube6" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube6" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "6BC66D7F-D74B-1C74-F780-9DAD8DE13D3B";
 	setAttr ".t" -type "double3" 0.13765187561511993 1.1128354639586595 0.27015703916549683 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape6" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube6";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape6" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube6";
 	rename -uid "1E958CB5-AD4B-45EB-BFD4-23AACADB9F9E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3158,11 +3158,11 @@ createNode mesh -n "Human_Latest:pCubeShape6" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube5" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube5" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "254AAC3A-C64C-E92A-4243-1AB62B527420";
 	setAttr ".t" -type "double3" 0.093695275485515594 1.1212105312848428 0.28836447000503534 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape5" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube5";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape5" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube5";
 	rename -uid "466F8759-F949-0CCA-8206-11BBDFB0169C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3201,11 +3201,11 @@ createNode mesh -n "Human_Latest:pCubeShape5" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube4" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube4" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "696FA76C-8E4B-2614-A935-8F8D6A1F4671";
 	setAttr ".t" -type "double3" 0.047431573271751404 1.12749183177948 0.29947137832641602 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape4" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube4";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape4" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube4";
 	rename -uid "957AF3E4-A745-B4B5-E25E-569133F940A0";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3244,11 +3244,11 @@ createNode mesh -n "Human_Latest:pCubeShape4" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube3" -p "Human_Latest:eyeGuidesRow2";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube3" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow2";
 	rename -uid "2EE45357-6349-F83F-30AF-0493235942CF";
 	setAttr ".t" -type "double3" 0 1.12749183177948 0.30320432782173157 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape3" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube3";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape3" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube3";
 	rename -uid "EA89CEA9-9F4E-7031-E238-8CAE3057965B";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3287,14 +3287,13 @@ createNode mesh -n "Human_Latest:pCubeShape3" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:eyeGuidesRow1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Human_Latest:eyeGuidesRow1" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "5A307C80-EE43-C6F2-06B7-8DBE9D07ABF2";
-	setAttr ".v" no;
-createNode transform -n "Human_Latest:pCube13" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube13" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "B7BEA252-8E4A-95D4-7D8F-87A07885441F";
 	setAttr ".t" -type "double3" 0.21439781785011292 1.12749183177948 0.21439783275127411 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape13" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube13";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape13" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube13";
 	rename -uid "EB14A5A3-4749-17A2-A745-809B0389D272";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3333,11 +3332,11 @@ createNode mesh -n "Human_Latest:pCubeShape13" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube12" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube12" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "12915558-A446-BFC6-9B64-AEA467E9B917";
 	setAttr ".t" -type "double3" -0.21439781785011292 1.12749183177948 0.21439783275127411 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape12" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube12";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape12" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube12";
 	rename -uid "BA1C48D5-3E46-7A55-59F5-6F9EEF9ED58E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3376,11 +3375,11 @@ createNode mesh -n "Human_Latest:pCubeShape12" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube11" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube11" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "B38CF4A8-B74C-5A4F-E7DE-C79253E9555E";
 	setAttr ".t" -type "double3" -0.17821900546550751 1.12749183177948 0.24529746174812317 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape11" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube11";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape11" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube11";
 	rename -uid "7E32D373-534A-711F-1A0A-0FB4C3A0F7A1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3419,11 +3418,11 @@ createNode mesh -n "Human_Latest:pCubeShape11" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube10" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube10" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "7D60EA4B-8E4C-8101-4902-3F9DC252D873";
 	setAttr ".t" -type "double3" -0.13765187561511993 1.12749183177948 0.27015703916549683 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape10" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube10";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape10" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube10";
 	rename -uid "3C4B0803-F248-86AB-C338-D39DB9BAABDD";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3462,11 +3461,11 @@ createNode mesh -n "Human_Latest:pCubeShape10" -p "|YoungSamLatest_YoungSam|Huma
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube9" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube9" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "29BA6368-BF41-3E1C-D45F-8FA354388BF9";
 	setAttr ".t" -type "double3" -0.093695275485515594 1.12749183177948 0.2883644700050354 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape9" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube9";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape9" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube9";
 	rename -uid "9119B195-7C4B-BE45-876B-E8AE88FD05A7";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3505,11 +3504,11 @@ createNode mesh -n "Human_Latest:pCubeShape9" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube8" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube8" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "CC29E1B0-CD4B-0B8C-D3D0-428647B0B0DA";
 	setAttr ".t" -type "double3" -0.047431573271751404 1.12749183177948 0.29947137832641602 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape8" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube8";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape8" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube8";
 	rename -uid "E72061BC-0149-1D24-3999-EEB9F3D94859";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3548,11 +3547,11 @@ createNode mesh -n "Human_Latest:pCubeShape8" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube7" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube7" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "EA464253-B045-40E2-3B24-D5B1BD10985B";
 	setAttr ".t" -type "double3" 0.17821900546550751 1.12749183177948 0.24529746174812317 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape7" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube7";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape7" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube7";
 	rename -uid "39A008A2-0140-4D16-47B8-22961A7BB937";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3591,11 +3590,11 @@ createNode mesh -n "Human_Latest:pCubeShape7" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube6" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube6" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "3D12DD9D-284E-73E7-D8F3-EAA3F394ACC9";
 	setAttr ".t" -type "double3" 0.13765187561511993 1.12749183177948 0.27015703916549683 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape6" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube6";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape6" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube6";
 	rename -uid "0F4C3A28-FB40-3B3D-858C-97AB4DD26381";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3634,11 +3633,11 @@ createNode mesh -n "Human_Latest:pCubeShape6" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube5" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube5" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "3585F06B-A649-F0C4-3D02-3EB09F4404A4";
 	setAttr ".t" -type "double3" 0.093695275485515594 1.12749183177948 0.2883644700050354 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape5" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube5";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape5" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube5";
 	rename -uid "806085B7-C048-734E-3B17-00B32CA15FC5";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3677,11 +3676,11 @@ createNode mesh -n "Human_Latest:pCubeShape5" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube4" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube4" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "BB89675E-7648-7D57-E56B-EDADE83B3B14";
 	setAttr ".t" -type "double3" 0.047431573271751404 1.12749183177948 0.29947137832641602 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape4" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube4";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape4" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube4";
 	rename -uid "85BB295A-A747-FB59-8B5D-5DBC780C2295";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3720,11 +3719,11 @@ createNode mesh -n "Human_Latest:pCubeShape4" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pCube3" -p "Human_Latest:eyeGuidesRow1";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pCube3" -p "FoxGirl_Latest:Human_Latest:eyeGuidesRow1";
 	rename -uid "8CAFEC6E-1F43-69F2-12C6-E389D255F55B";
 	setAttr ".t" -type "double3" 0 1.12749183177948 0.30320432782173157 ;
 	setAttr ".s" -type "double3" 0.8 0.8 0.8 ;
-createNode mesh -n "Human_Latest:pCubeShape3" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube3";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pCubeShape3" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube3";
 	rename -uid "805F859D-004E-D4CD-219C-79B13EA186FA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3763,15 +3762,15 @@ createNode mesh -n "Human_Latest:pCubeShape3" -p "|YoungSamLatest_YoungSam|Human
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:Line" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Human_Latest:Line" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "8D3B6452-034A-F5AE-2A97-5E8BC60BD416";
 	setAttr ".t" -type "double3" 0 1.0462644354410706 0.31160832558555479 ;
 	setAttr ".r" -type "double3" 12.000000000000002 0 0 ;
-	setAttr ".s" -type "double3" 0.0040526358289472786 0.31688740105817831 0.0040526358289472786 ;
+	setAttr ".s" -type "double3" 0.0040526358289472786 0.29306858778383554 0.0040526358289472786 ;
 	setAttr ".rp" -type "double3" 0 0.081911076010858397 0 ;
 	setAttr ".sp" -type "double3" 0 0.49974471164543649 0 ;
 	setAttr ".spt" -type "double3" 0 -0.41783363563458004 0 ;
-createNode mesh -n "Human_Latest:LineShape" -p "Human_Latest:Line";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:LineShape" -p "FoxGirl_Latest:Human_Latest:Line";
 	rename -uid "2E656149-7B46-D2B9-F0F7-89A66288F8D3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3808,7 +3807,8 @@ createNode mesh -n "Human_Latest:LineShape" -p "Human_Latest:Line";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode parentConstraint -n "YoungSamLatest_head_parentConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode parentConstraint -n "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "BD63F603-F74C-DEA6-B673-739651E44AED";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "neckW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -3826,7 +3826,8 @@ createNode parentConstraint -n "YoungSamLatest_head_parentConstraint1" -p "|Youn
 	setAttr ".tg[0].tot" -type "double3" 0.00051525473827496171 0.017646484928753647 
 		0.0052013681027949926 ;
 	setAttr -k on ".w0";
-createNode scaleConstraint -n "YoungSamLatest_head_scaleConstraint1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode scaleConstraint -n "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1" 
+		-p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "179D940D-5743-98C9-9FC9-929F6672FDDE";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "neckW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -3842,11 +3843,12 @@ createNode scaleConstraint -n "YoungSamLatest_head_scaleConstraint1" -p "|YoungS
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode transform -n "halfhalfline" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:halfhalfline" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "FE179805-4C4C-FC55-1C78-6693AA3AECB7";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0.9945973646697599 0 ;
 	setAttr ".s" -type "double3" 0.9125607819791075 0.2 0.9125607819791075 ;
-createNode mesh -n "halfhalflineShape" -p "halfhalfline";
+createNode mesh -n "FoxGirl_Latest:halfhalflineShape" -p "FoxGirl_Latest:halfhalfline";
 	rename -uid "B15390EA-1A43-FB58-E127-F79A1CDAA191";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3861,11 +3863,12 @@ createNode mesh -n "halfhalflineShape" -p "halfhalfline";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "halfline" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:halfline" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "D05F3B8D-8D4B-6D95-10FB-23BD859F3FAE";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1.1280614584115687 0 ;
 	setAttr ".s" -type "double3" 1.0143301117737193 0.2 1.0143301117737193 ;
-createNode mesh -n "halflineShape" -p "halfline";
+createNode mesh -n "FoxGirl_Latest:halflineShape" -p "FoxGirl_Latest:halfline";
 	rename -uid "DE372664-F342-A48B-93E3-88B82767BD86";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4104,19 +4107,20 @@ createNode mesh -n "halflineShape" -p "halfline";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "earGuides" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:earGuides" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "C0293C0B-E246-9300-FB8D-B49020A4801F";
-createNode transform -n "ear_rough1" -p "earGuides";
+createNode transform -n "FoxGirl_Latest:ear_rough1" -p "FoxGirl_Latest:earGuides";
 	rename -uid "18BD6E3F-4C4B-CBD7-E99A-0798745C8E98";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.28470851378892326 1.3418281822875537 0 ;
 	setAttr ".r" -type "double3" 0 180 0 ;
 	setAttr ".s" -type "double3" 0.28918254237140323 0.28918254237140323 -0.28918254237140323 ;
-createNode mesh -n "ear_rough1Shape" -p "ear_rough1";
+createNode mesh -n "FoxGirl_Latest:ear_rough1Shape" -p "FoxGirl_Latest:ear_rough1";
 	rename -uid "34D06140-D146-FBF3-A394-73B32260D34B";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.25 0.375 ;
+	setAttr ".pv" -type "double2" 0.625 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -4125,10 +4129,10 @@ createNode mesh -n "ear_rough1Shape" -p "ear_rough1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0 0 -0.11432734 -0.83482099 
-		0 -0.34117562 -0.0020073508 -0.0042196019 -0.51597184 -0.067919657 -0.10080761 -0.38465071 
-		-2.6090241e-15 -0.5037787 0.03075332 -0.094148777 -0.53914791 0.30678636 0 0 -0.10257564 
-		-0.21380243 0 0.068653151;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  0 0 -0.11432734 -0.95215088 
+		0 -0.34117562 -0.0020073508 -0.0042196019 -0.51597184 -0.037362665 0.042102557 -0.38465071 
+		0 -0.5037787 0.03075332 -0.094148777 -0.53914791 0.30678636 0 0 -0.10257564 -0.21380243 
+		0 0.068653151;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
@@ -4152,28 +4156,107 @@ createNode mesh -n "ear_rough1Shape" -p "ear_rough1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "ear_rough" -p "earGuides";
+createNode transform -n "FoxGirl_Latest:ear_rough" -p "FoxGirl_Latest:earGuides";
 	rename -uid "A7E303F2-534A-1269-CC1D-50BB2DB8B516";
 	setAttr ".t" -type "double3" 0.28470851378892326 1.3418281822875537 0 ;
 	setAttr ".s" -type "double3" 0.28918254237140323 0.28918254237140323 0.28918254237140323 ;
-createNode mesh -n "ear_roughShape" -p "ear_rough";
+createNode mesh -n "FoxGirl_Latest:ear_roughShape" -p "FoxGirl_Latest:ear_rough";
 	rename -uid "156918CF-7149-1548-566A-1D867D2F948D";
 	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.25 0.375 ;
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0 0 -0.11432734 -0.83482099 
-		0 -0.34117562 -0.0020073508 -0.0042196019 -0.51597184 -0.067919657 -0.10080761 -0.38465071 
-		-2.6090241e-15 -0.5037787 0.03075332 -0.094148777 -0.53914791 0.30678636 0 0 -0.10257564 
-		-0.21380243 0 0.068653151;
+	setAttr ".pt[7]" -type "float3"  0 0 -0.039115228;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Line" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "ear_rough" -p "FoxGirl_Latest:earGuides";
+	rename -uid "8C8221AB-E54A-AAED-B9C7-AD8214152C2B";
+	setAttr ".t" -type "double3" 0.28470851378892326 1.3418281822875537 0 ;
+	setAttr ".s" -type "double3" -0.289 0.28918254237140323 0.28918254237140323 ;
+	setAttr ".rp" -type "double3" -0.28470851378892326 0.0060876993563712695 -0.031362289267019519 ;
+	setAttr ".sp" -type "double3" -0.98452870444463458 0.021051406860351562 -0.10845153033733368 ;
+	setAttr ".spt" -type "double3" 0.69982019065571133 -0.014963707503980241 0.07708924107031416 ;
+createNode mesh -n "ear_roughShape" -p "ear_rough";
+	rename -uid "CF60F944-B64D-14E0-2058-918E4ED98DC9";
+	setAttr -k off ".v";
+	setAttr -s 3 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 2 "f[0:3]" "f[5:9]";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "f[4]" "f[14:17]";
+	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[10:13]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 26 ".uvst[0].uvsp[0:25]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.625 0 0.875 0 0.875 0.25 0.625 0.25 0.625 0 0.875
+		 0 0.875 0.25 0.625 0.25 0.875 0.25 0.875 0 0.625 0 0.625 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".pt[15]" -type "float3"  2.220446e-16 0 -0.039115228;
+	setAttr -s 20 ".vt[0:19]"  -0.50000018 -0.5 0.3856726 -0.452151 -0.5 0.15882437
+		 -0.50200754 0.49577999 -0.015971838 0.46263713 0.54210281 0.11534929 -0.50000018 -0.0037789345 -0.46924666
+		 0.40585107 -0.039148331 -0.19321364 -0.50000018 -0.5 -0.60257566 0.28619736 -0.5 -0.43134683
+		 0.25492269 -0.43109846 -0.35996959 -0.34977096 -0.43109846 0.12336974 0.35291678 -0.053668499 -0.16494288
+		 0.39942354 0.42236519 0.087764442 -0.36134785 -0.31587583 -0.29471591 -0.36135226 -0.31587583 0.058116063
+		 -0.36134714 -0.040356409 -0.15234873 -0.36134678 0.30714256 0.032124616 0.23658028 -0.051500276 -0.1628916
+		 0.15454698 -0.41233146 -0.3493413 -0.35165727 -0.41233146 0.11274148 0.27551228 0.40359819 0.078702047;
+	setAttr -s 36 ".ed[0:35]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 7 8 1 1 9 1 8 9 0 5 10 1 10 8 0 3 11 1 11 10 0 9 11 0
+		 8 17 0 9 18 0 12 13 0 10 16 0 14 12 0 11 19 0 15 14 0 13 15 0 16 14 0 17 12 0 16 17 1
+		 18 13 0 17 18 1 19 15 0 18 19 1 19 16 1;
+	setAttr -s 18 -ch 72 ".fc[0:17]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -23 -25 -27 -28
+		mu 0 4 18 19 20 21
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13
+		f 4 -12 12 14 -14
+		mu 0 4 1 10 15 14
+		f 4 -10 15 16 -13
+		mu 0 4 10 11 16 15
+		f 4 -8 17 18 -16
+		mu 0 4 11 3 17 16
+		f 4 -6 13 19 -18
+		mu 0 4 3 1 14 17
+		f 4 -15 20 32 -22
+		mu 0 4 14 15 23 24
+		f 4 -17 23 30 -21
+		mu 0 4 15 16 22 23
+		f 4 -19 25 35 -24
+		mu 0 4 16 17 25 22
+		f 4 -20 21 34 -26
+		mu 0 4 17 14 24 25
+		f 4 -31 28 24 -30
+		mu 0 4 23 22 20 19
+		f 4 -33 29 22 -32
+		mu 0 4 24 23 19 18
+		f 4 -35 31 27 -34
+		mu 0 4 25 24 18 21
+		f 4 -36 33 26 -29
+		mu 0 4 22 25 21 20;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".dr" 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "FoxGirl_Latest:Line" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "2F5B6B29-8941-6BE0-932F-E9BDA1E92F7C";
 	setAttr ".t" -type "double3" 0 0.98096945651734146 0.29772944937121038 ;
 	setAttr ".r" -type "double3" 12.000000000000002 0 0 ;
@@ -4181,7 +4264,7 @@ createNode transform -n "Line" -p "|YoungSamLatest_YoungSam|Human_Latest:master_
 	setAttr ".rp" -type "double3" 0 0.081911076010858397 0 ;
 	setAttr ".sp" -type "double3" 0 0.49974471164543649 0 ;
 	setAttr ".spt" -type "double3" 0 -0.41783363563458004 0 ;
-createNode mesh -n "LineShape" -p "Line";
+createNode mesh -n "FoxGirl_Latest:LineShape" -p "FoxGirl_Latest:Line";
 	rename -uid "93EC0EEA-4D40-0C2F-4373-D8B3E5E33A3F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4218,7 +4301,7 @@ createNode mesh -n "LineShape" -p "Line";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Line1" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Line1" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "5D24103B-FB41-6F20-1F91-329D3F9336F9";
 	setAttr ".t" -type "double3" 0 1.0146291780731906 0.30488404405189207 ;
 	setAttr ".r" -type "double3" 12.000000000000002 0 0 ;
@@ -4226,7 +4309,7 @@ createNode transform -n "Line1" -p "|YoungSamLatest_YoungSam|Human_Latest:master
 	setAttr ".rp" -type "double3" 0 0.081911076010858397 0 ;
 	setAttr ".sp" -type "double3" 0 0.49974471164543649 0 ;
 	setAttr ".spt" -type "double3" 0 -0.41783363563458004 0 ;
-createNode mesh -n "Line1Shape" -p "Line1";
+createNode mesh -n "FoxGirl_Latest:Line1Shape" -p "FoxGirl_Latest:Line1";
 	rename -uid "2C6519CB-7441-59CC-5D0C-A7A8873DE591";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4263,7 +4346,7 @@ createNode mesh -n "Line1Shape" -p "Line1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Line2" -p "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head";
+createNode transform -n "FoxGirl_Latest:Line2" -p "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head";
 	rename -uid "EF5D172E-B847-0C3C-1EC7-CA9864FD1272";
 	setAttr ".t" -type "double3" 0 0.95062734762341017 0.291280035030899 ;
 	setAttr ".r" -type "double3" 12.000000000000002 0 0 ;
@@ -4271,7 +4354,7 @@ createNode transform -n "Line2" -p "|YoungSamLatest_YoungSam|Human_Latest:master
 	setAttr ".rp" -type "double3" 0 0.081911076010858397 0 ;
 	setAttr ".sp" -type "double3" 0 0.49974471164543649 0 ;
 	setAttr ".spt" -type "double3" 0 -0.41783363563458004 0 ;
-createNode mesh -n "Line2Shape" -p "Line2";
+createNode mesh -n "FoxGirl_Latest:Line2Shape" -p "FoxGirl_Latest:Line2";
 	rename -uid "1F875711-3140-4389-25F9-EE81D2D454E3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4308,11 +4391,11 @@ createNode mesh -n "Line2Shape" -p "Line2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "YoungSamLatest_rightLegDirection" -p "Human_Latest:master_control";
+createNode transform -n "FoxGirl_Latest:YoungSamLatest_rightLegDirection" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "4CE99B1D-4A4C-E6E0-F27D-7B8573AF6D9B";
 	setAttr ".rp" -type "double3" -0.091533198952674866 0.2381841242313385 0.35093203442234389 ;
 	setAttr ".sp" -type "double3" -0.091533198952674866 0.2381841242313385 0.35093203442234389 ;
-createNode mesh -n "YoungSamLatest_rightLegDirectionShape" -p "YoungSamLatest_rightLegDirection";
+createNode mesh -n "FoxGirl_Latest:YoungSamLatest_rightLegDirectionShape" -p "FoxGirl_Latest:YoungSamLatest_rightLegDirection";
 	rename -uid "8F00AA28-2A4A-68B0-66C2-858853A68E7D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4354,11 +4437,11 @@ createNode mesh -n "YoungSamLatest_rightLegDirectionShape" -p "YoungSamLatest_ri
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "YoungSamLatest_leftLegDirection" -p "Human_Latest:master_control";
+createNode transform -n "FoxGirl_Latest:YoungSamLatest_leftLegDirection" -p "FoxGirl_Latest:Human_Latest:master_control";
 	rename -uid "B434A45D-BF4B-E720-29C7-BA9367065D6B";
 	setAttr ".rp" -type "double3" 0.089758187532424927 0.2381841242313385 0.35093203442234389 ;
 	setAttr ".sp" -type "double3" 0.089758187532424927 0.2381841242313385 0.35093203442234389 ;
-createNode mesh -n "YoungSamLatest_leftLegDirectionShape" -p "YoungSamLatest_leftLegDirection";
+createNode mesh -n "FoxGirl_Latest:YoungSamLatest_leftLegDirectionShape" -p "FoxGirl_Latest:YoungSamLatest_leftLegDirection";
 	rename -uid "F143ADBB-8747-01FE-6CC2-8181B72A482E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4397,13 +4480,13 @@ createNode mesh -n "YoungSamLatest_leftLegDirectionShape" -p "YoungSamLatest_lef
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:pPlane1" -p "YoungSamLatest_YoungSam";
+createNode transform -n "FoxGirl_Latest:Human_Latest:pPlane1" -p "FoxGirl_Latest:YoungSamLatest_YoungSam";
 	rename -uid "C3CE990C-3D46-B517-7D2E-809C566263CE";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 -1.1392907467024851 ;
 	setAttr ".r" -type "double3" 90 0 0 ;
 	setAttr ".s" -type "double3" 5.2457863318064719 5.2457863318064719 5.2457863318064719 ;
-createNode mesh -n "Human_Latest:pPlaneShape1" -p "Human_Latest:pPlane1";
+createNode mesh -n "FoxGirl_Latest:Human_Latest:pPlaneShape1" -p "FoxGirl_Latest:Human_Latest:pPlane1";
 	rename -uid "ECB0FC0E-F244-6FB6-1486-40B0BB507297";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4425,15 +4508,16 @@ createNode mesh -n "Human_Latest:pPlaneShape1" -p "Human_Latest:pPlane1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Human_Latest:directionalLight1" -p "YoungSamLatest_YoungSam";
+createNode transform -n "FoxGirl_Latest:Human_Latest:directionalLight1" -p "FoxGirl_Latest:YoungSamLatest_YoungSam";
 	rename -uid "F83FAB3E-7244-53DB-E82A-8F97F31CD8AD";
-	setAttr ".t" -type "double3" 0 0 1.8879389707657963 ;
+	setAttr ".t" -type "double3" 0 1.4569000186114558 1.8879389707657963 ;
 	setAttr ".r" -type "double3" -29.999999999999996 -29.999999999999996 0 ;
-createNode directionalLight -n "Human_Latest:directionalLightShape1" -p "Human_Latest:directionalLight1";
+createNode directionalLight -n "FoxGirl_Latest:Human_Latest:directionalLightShape1" 
+		-p "FoxGirl_Latest:Human_Latest:directionalLight1";
 	rename -uid "C2F269B9-E64D-7F04-4E3D-58A0704878F2";
 	setAttr -k off ".v";
 	setAttr ".in" 15;
-createNode transform -n "YoungSamLatest_body" -p "YoungSamLatest_YoungSam";
+createNode transform -n "FoxGirl_Latest:YoungSamLatest_body" -p "FoxGirl_Latest:YoungSamLatest_YoungSam";
 	rename -uid "65FAE269-084F-4FF0-3C9B-A197A57B1976";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
@@ -4446,7 +4530,7 @@ createNode transform -n "YoungSamLatest_body" -p "YoungSamLatest_YoungSam";
 	setAttr -l on ".sz";
 	setAttr ".rp" -type "double3" 0 0.56991773069442031 0 ;
 	setAttr ".sp" -type "double3" 0 0.56991773069442031 0 ;
-createNode mesh -n "YoungSamLatest_bodyShape" -p "YoungSamLatest_body";
+createNode mesh -n "FoxGirl_Latest:YoungSamLatest_bodyShape" -p "FoxGirl_Latest:YoungSamLatest_body";
 	rename -uid "A3FDE9F1-E34C-256B-8A38-F49451E2BF19";
 	setAttr -k off ".v";
 	setAttr -s 10 ".iog[0].og";
@@ -4462,7 +4546,7 @@ createNode mesh -n "YoungSamLatest_bodyShape" -p "YoungSamLatest_body";
 	setAttr ".dsm" 2;
 	setAttr ".vcs" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode mesh -n "YoungSamLatest_bodyShape1Orig" -p "YoungSamLatest_body";
+createNode mesh -n "FoxGirl_Latest:YoungSamLatest_bodyShape1Orig" -p "FoxGirl_Latest:YoungSamLatest_body";
 	rename -uid "BD563F6B-7049-ECC9-E6F0-67AE31227A4E";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -5921,12 +6005,11 @@ createNode mesh -n "YoungSamLatest_bodyShape1Orig" -p "YoungSamLatest_body";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pSphere1";
+createNode transform -n "FoxGirl_Latest:pSphere1";
 	rename -uid "CC7FB538-1B4B-7366-2655-358CFA1B4EB7";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1.132720927091444 0 ;
-	setAttr ".s" -type "double3" 0.3775332295698543 0.3774868072938603 0.3774868072938603 ;
-createNode mesh -n "pSphereShape1" -p "pSphere1";
+	setAttr ".s" -type "double3" 0.36454629863188664 0.36450147325609938 0.36450147325609938 ;
+createNode mesh -n "FoxGirl_Latest:pSphereShape1" -p "FoxGirl_Latest:pSphere1";
 	rename -uid "BCCF8FC0-3848-7C49-C88D-3B9C20365261";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -5938,118 +6021,257 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9DB34B76-2B49-B170-D159-8D9C9328501B";
-	setAttr -s 7 ".lnk";
-	setAttr -s 7 ".slnk";
+	rename -uid "05403DC8-4245-A900-5BA4-FD82C2924E0F";
+	setAttr -s 10 ".lnk";
+	setAttr -s 10 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AEC13BE9-8442-526E-9360-4488E6AEC93B";
+	rename -uid "3181F109-4949-D2AF-E902-05A9AB2E30EE";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "77349F28-7A44-5F24-18EA-F88294720349";
+	rename -uid "820822E3-814C-54CD-5415-5CBC082C6AB7";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "CBD1622F-BC49-E3CF-80D0-69AD37DBAC53";
+	rename -uid "A40B8B13-5047-39D5-30DE-DC97BB7778A7";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "16AD2440-5448-E818-CDB5-69B30FF61E51";
+	rename -uid "9356B066-434A-5365-F0A8-168C8CFC196F";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "76B7204D-0D47-EB13-67D5-DDBA438E505B";
+	rename -uid "65C5510C-CB42-26D1-02E3-98A52E81104E";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "CCB44F72-DD4A-4731-376C-B4885C6829A1";
+	rename -uid "9B097585-2B47-CC4B-11F2-5989AE9770B3";
 	setAttr ".g" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
-	rename -uid "789481F9-634D-CBBD-BFF9-738B777DE939";
+	rename -uid "2252F1BE-5246-31D9-DBD2-15B9E3339255";
+	setAttr ".AA_samples" 4;
 	setAttr ".version" -type "string" "4.0.0";
-createNode script -n "Human_Latest:uiConfigurationScriptNode";
-	rename -uid "2DD0BA55-5042-47B1-1954-39B6A7F580F7";
+createNode aiAOVFilter -s -n "defaultArnoldFilter";
+	rename -uid "206F240F-E74C-A582-960F-569CB1AF88DD";
+	setAttr ".ai_translator" -type "string" "contour";
+createNode aiAOVDriver -s -n "defaultArnoldDriver";
+	rename -uid "C4723281-BB43-414C-CEE0-449729F9690B";
+	setAttr ".ai_translator" -type "string" "exr";
+createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
+	rename -uid "134A0C21-0F49-4280-A633-91AB1E440E41";
+	setAttr ".output_mode" 0;
+	setAttr ".ai_translator" -type "string" "maya";
+createNode script -n "uiConfigurationScriptNode";
+	rename -uid "0A5CAABF-5140-0192-991C-F3896BA33982";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 244\n            -height 273\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 244\n            -height 273\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 244\n            -height 273\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
-		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 495\n            -height 590\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
-		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
-		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
-		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n"
-		+ "            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
-		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
-		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n"
-		+ "                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n"
-		+ "                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n"
-		+ "                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
-		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n"
-		+ "                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n"
-		+ "                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
-		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
-		+ "                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
-		+ "                -smoothWireframe 0\n                -lineWidth 3\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
-		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
-		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
-		+ "\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 3\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 495\\n    -height 590\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 3\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 495\\n    -height 590\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12.000000000000002 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 361\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 361\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n"
+		+ "            -width 1119\n            -height 766\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"FoxGirl_Latest:YoungSamLatest_persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
+		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 361\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
+		+ "            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n"
+		+ "            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
+		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
+		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
+		+ "                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
+		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n"
+		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
+		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n"
+		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n"
+		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
+		+ "                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 766\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 766\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
-createNode script -n "Human_Latest:sceneConfigurationScriptNode";
-	rename -uid "18043793-0544-35EF-2C39-6B80B4739488";
+createNode script -n "sceneConfigurationScriptNode";
+	rename -uid "3500988D-C041-4000-281D-569D9C60CB2F";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
-createNode aiToon -n "Human_Latest:shirtShader";
-	rename -uid "FAA0E5A0-4243-5F3C-F20B-8F911AD899A6";
-	setAttr ".rim_light_width" 0.60000002384185791;
-createNode shadingEngine -n "Human_Latest:aiToon1SG";
-	rename -uid "46A19B19-F243-76EC-EDC7-9496885F699E";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "Human_Latest:materialInfo1";
-	rename -uid "53E2D26F-B44A-4EFA-23A7-F58ADF049C10";
-createNode ramp -n "Human_Latest:toneMap_ramp";
-	rename -uid "3AA0CDA5-5141-6858-E9AC-41873738C3BE";
+createNode ramp -n "ramp6";
+	rename -uid "8E9C6E33-364D-95DE-C8ED-51B3571033C8";
 	setAttr ".in" 0;
 	setAttr -s 2 ".cel";
 	setAttr ".cel[0].ep" 0;
-	setAttr ".cel[0].ec" -type "float3" 0.50199997 0.29768598 0.29768598 ;
-	setAttr ".cel[1].ep" 0.50898206233978271;
-	setAttr ".cel[1].ec" -type "float3" 1 1 1 ;
-createNode place2dTexture -n "Human_Latest:place2dTexture1";
-	rename -uid "B6E17E29-574C-52ED-1D5E-9AA746F806FD";
-createNode aiToon -n "Human_Latest:skinShader";
+	setAttr ".cel[0].ec" -type "float3" 0.63076603 0.14126593 0.064804196 ;
+	setAttr ".cel[1].ep" 0.50574713945388794;
+	setAttr ".cel[1].ec" -type "float3" 0.77583051 0.24619961 0.08437486 ;
+createNode place2dTexture -n "place2dTexture6";
+	rename -uid "2C788B63-F941-B822-83FE-1AADB0B5BA06";
+createNode ramp -n "ramp7";
+	rename -uid "7A54D33B-9B46-EB7C-4496-EEA3766791CC";
+	setAttr ".in" 0;
+	setAttr -s 2 ".cel";
+	setAttr ".cel[0].ep" 0;
+	setAttr ".cel[0].ec" -type "float3" 0.66799998 0.34005755 0.299932 ;
+	setAttr ".cel[1].ep" 0.50862067937850952;
+	setAttr ".cel[1].ec" -type "float3" 1 0.90935731 0.84799999 ;
+createNode place2dTexture -n "place2dTexture7";
+	rename -uid "E1E199D9-2F4E-30DD-1F72-8F80F0A82736";
+createNode polyExtrudeFace -n "polyExtrudeFace4";
+	rename -uid "CC843C49-434B-40A0-D7B4-4BA30BAAA834";
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.28918254237140323 0 0 0 0 0.28918254237140323 0 0
+		 0 0 0.28918254237140323 0 0.28470851378892326 1.3418281822875537 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.28622475 1.3479159 -0.039404366 ;
+	setAttr ".rs" 1894388392;
+	setAttr ".ls" -type "double3" 0.81898148540476445 0.81898148540476445 0.81898148540476445 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.1539543724018845 1.1972369111018522 -0.12473797401492766 ;
+	setAttr ".cbx" -type "double3" 0.41849515453809094 1.498594783239507 0.045929239217141545 ;
+createNode polyTweak -n "FoxGirl_Latest:polyTweak1";
+	rename -uid "B705102F-854B-899E-A6A6-93BE0311A4E1";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0 0 -0.11432734 -0.95215088
+		 0 -0.34117562 -0.0020073508 -0.0042196019 -0.51597184 -0.037362665 0.042102557 -0.38465071
+		 0 -0.5037787 0.03075332 -0.094148777 -0.53914791 0.30678636 0 0 -0.10257564 -0.21380243
+		 0 0.068653151;
+createNode polyExtrudeFace -n "polyExtrudeFace5";
+	rename -uid "29EA9690-BE40-0843-0082-F49F32E119C3";
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 0.28918254237140323 0 0 0 0 0.28918254237140323 0 0
+		 0 0 0.28918254237140323 0 0.28470851378892326 1.3418281822875537 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.29188788 1.3405654 -0.034210272 ;
+	setAttr ".rs" 1291074452;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.18356087464199294 1.2171620332794724 -0.10409692009459948 ;
+	setAttr ".cbx" -type "double3" 0.40021486293782066 1.4639688213356836 0.035676374619438483 ;
+createNode aiFlat -n "lightPink";
+	rename -uid "20F28FE6-C84B-4AFD-2D04-C59434149688";
+	setAttr ".color" -type "float3" 0.73047447 0.55833495 0.55200464 ;
+createNode shadingEngine -n "aiFlat1SG";
+	rename -uid "6EAD3C16-064B-FF89-719D-FB8E13BA0002";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "materialInfo8";
+	rename -uid "99350BF7-2846-6FE0-1833-48B38F70199A";
+createNode groupId -n "groupId17";
+	rename -uid "D246E081-A443-83EB-806F-7FB824DB7CB5";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts7";
+	rename -uid "D5D62751-7B46-3D4C-AF06-589D4517F4EA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0:3]" "f[5:9]";
+	setAttr ".irc" -type "componentList" 2 "f[4]" "f[10:13]";
+createNode groupId -n "groupId18";
+	rename -uid "494E8A83-E64F-5563-7374-BE8ACE52D337";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId19";
+	rename -uid "4C46AFDA-1742-E257-6920-85ADF28BFF79";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts8";
+	rename -uid "4B7637FD-9446-B63D-7411-2F8022FD39CA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[4]" "f[10:13]";
+createNode polySplitRing -n "polySplitRing4";
+	rename -uid "C81CD408-8744-D7D7-8F15-45B9C5C8973D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[20:21]" "e[23]" "e[25]";
+	setAttr ".ix" -type "matrix" 0.28918254237140323 0 0 0 0 0.28918254237140323 0 0
+		 0 0 0.28918254237140323 0 0.28470851378892326 1.3418281822875537 0 1;
+	setAttr ".wt" 0.16287605464458466;
+	setAttr ".re" 23;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "FoxGirl_Latest:polyTweak2";
+	rename -uid "98589B39-044B-08C9-8257-AB85D359AA65";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk[12:15]" -type "float3"  -0.61627054 0.11522264 0.065253675
+		 -0.011581311 0.11522264 -0.065253675 -0.71426392 0.013312091 0.012594153 -0.76077032
+		 -0.11522264 -0.055639826;
+createNode aiFlat -n "aiFlat2";
+	rename -uid "CD8F5462-B74C-366D-1E7D-17BCA2C88E0E";
+	setAttr ".color" -type "float3" 0.80695474 0.47352317 0.49101132 ;
+createNode shadingEngine -n "aiFlat2SG";
+	rename -uid "736A9531-AD48-71F6-8FB2-768D21C517F1";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "materialInfo9";
+	rename -uid "D965AA3D-4241-C702-031F-5792D24025B3";
+createNode groupParts -n "groupParts9";
+	rename -uid "1FFDC9BC-C744-6141-7181-089C765BC199";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[4]" "f[14:17]";
+	setAttr ".irc" -type "componentList" 1 "f[10:13]";
+createNode groupId -n "groupId20";
+	rename -uid "5DA3EF2B-A54D-EBA7-2EF3-D09DB8324DC3";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts10";
+	rename -uid "83F7C372-1841-213B-B9CA-C087BC419953";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[10:13]";
+createNode groupId -n "groupId21";
+	rename -uid "AD5BCC0E-4D47-CDAA-BF4B-8680285E303C";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId22";
+	rename -uid "8030ABB8-A14F-CEAB-3E7D-CC9D21C1BBAB";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId23";
+	rename -uid "1574F581-8444-B3D8-CE71-2D947FD27C54";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId24";
+	rename -uid "2F4BBE88-3D42-600D-83F1-12A543B10E86";
+	setAttr ".ihi" 0;
+createNode shapeEditorManager -n "FoxGirl_Latest:shapeEditorManager";
+	rename -uid "A21D24CB-BD44-E8C8-3438-119413CEE69E";
+createNode poseInterpolatorManager -n "FoxGirl_Latest:poseInterpolatorManager";
+	rename -uid "602DBF85-524F-0180-BB58-AD91C4ED742B";
+createNode renderLayerManager -n "FoxGirl_Latest:renderLayerManager";
+	rename -uid "BED89998-6645-5979-8DE4-04A0F0AC046B";
+createNode renderLayer -n "FoxGirl_Latest:defaultRenderLayer";
+	rename -uid "CCB44F72-DD4A-4731-376C-B4885C6829A1";
+	setAttr ".g" yes;
+createNode aiToon -n "FoxGirl_Latest:Human_Latest:shirtShader";
+	rename -uid "FAA0E5A0-4243-5F3C-F20B-8F911AD899A6";
+	setAttr ".rim_light_width" 0.40000000596046448;
+createNode shadingEngine -n "FoxGirl_Latest:Human_Latest:aiToon1SG";
+	rename -uid "46A19B19-F243-76EC-EDC7-9496885F699E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "FoxGirl_Latest:Human_Latest:materialInfo1";
+	rename -uid "53E2D26F-B44A-4EFA-23A7-F58ADF049C10";
+createNode aiToon -n "FoxGirl_Latest:Human_Latest:skinShader";
 	rename -uid "14D7B1E7-5C48-9BBC-445A-D49DA808636F";
-	setAttr ".base_color" -type "float3" 1 0.93099999 0.93099999 ;
 	setAttr ".rim_light_width" 0.60000002384185791;
-createNode shadingEngine -n "Human_Latest:aiToon2SG";
+createNode shadingEngine -n "FoxGirl_Latest:Human_Latest:aiToon2SG";
 	rename -uid "357D9E62-5D49-6D98-0A21-EC978821C0BE";
 	setAttr ".ihi" 0;
 	setAttr -s 10 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 9 ".gn";
-createNode materialInfo -n "Human_Latest:materialInfo2";
+createNode materialInfo -n "FoxGirl_Latest:Human_Latest:materialInfo2";
 	rename -uid "43019E28-4C48-787D-213D-CB958B812F4F";
-createNode aiFlat -n "Human_Latest:blackFlat";
+createNode aiFlat -n "FoxGirl_Latest:Human_Latest:blackFlat";
 	rename -uid "FB812DC2-6842-78E6-BD4C-F593D5BE3D5F";
 	setAttr ".color" -type "float3" 0 0 0 ;
-createNode shadingEngine -n "Human_Latest:aiFlat1SG";
+createNode shadingEngine -n "FoxGirl_Latest:Human_Latest:aiFlat1SG";
 	rename -uid "7C5BBC86-D847-E7D2-B13B-CB9109E125EC";
 	setAttr ".ihi" 0;
 	setAttr -s 41 ".dsm";
 	setAttr ".ro" yes;
-createNode materialInfo -n "Human_Latest:materialInfo3";
+createNode materialInfo -n "FoxGirl_Latest:Human_Latest:materialInfo3";
 	rename -uid "C1834757-7D41-008E-1BB7-399D1C47A282";
-createNode ramp -n "Human_Latest:rim_ramp";
+createNode ramp -n "FoxGirl_Latest:Human_Latest:rim_ramp";
 	rename -uid "B8123C22-6D41-9E7B-DF79-F7BF796F357D";
 	setAttr ".in" 0;
 	setAttr -s 2 ".cel";
@@ -6057,29 +6279,29 @@ createNode ramp -n "Human_Latest:rim_ramp";
 	setAttr ".cel[0].ec" -type "float3" 0 0 0 ;
 	setAttr ".cel[1].ep" 0.50299400091171265;
 	setAttr ".cel[1].ec" -type "float3" 1 1 1 ;
-createNode place2dTexture -n "Human_Latest:place2dTexture2";
+createNode place2dTexture -n "FoxGirl_Latest:Human_Latest:place2dTexture2";
 	rename -uid "3203CFFD-3B4B-0634-6CE4-4593D6DF22FF";
-createNode aiToon -n "Human_Latest:dressShader";
+createNode aiToon -n "orangeShader";
 	rename -uid "FCD1FB6D-3748-9DB1-4521-CAA4AB781EA0";
-	setAttr ".base_color" -type "float3" 1 0.36833334 0.19999999 ;
 	setAttr ".rim_light_width" 0.40000000596046448;
-createNode shadingEngine -n "Human_Latest:aiToon3SG";
+createNode shadingEngine -n "FoxGirl_Latest:Human_Latest:aiToon3SG";
 	rename -uid "49E17E40-6D40-FB74-187A-35B428DC7CB3";
 	setAttr ".ihi" 0;
-	setAttr -s 4 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
-createNode materialInfo -n "Human_Latest:materialInfo4";
+	setAttr -s 4 ".gn";
+createNode materialInfo -n "FoxGirl_Latest:Human_Latest:materialInfo4";
 	rename -uid "3F6FCB72-B240-0C58-4B63-30B605A3EFFE";
-createNode aiFlat -n "Human_Latest:greyFlat";
+createNode aiFlat -n "FoxGirl_Latest:Human_Latest:greyFlat";
 	rename -uid "032A3C08-C041-3CE3-55AB-EBA31D595CD5";
 	setAttr ".color" -type "float3" 0.352 0.352 0.352 ;
-createNode shadingEngine -n "Human_Latest:aiFlat2SG";
+createNode shadingEngine -n "FoxGirl_Latest:Human_Latest:aiFlat2SG";
 	rename -uid "8BCF6F59-7C42-EFD9-956D-F08729BC472E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "Human_Latest:materialInfo5";
+createNode materialInfo -n "FoxGirl_Latest:Human_Latest:materialInfo5";
 	rename -uid "504DFB69-1743-21AF-8D02-90B379C431AA";
-createNode nodeGraphEditorInfo -n "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo";
+createNode nodeGraphEditorInfo -n "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo";
 	rename -uid "12A86449-AB42-392D-9093-0791D87E75E4";
 	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
@@ -6122,7 +6344,7 @@ createNode nodeGraphEditorInfo -n "Human_Latest:hyperShadePrimaryNodeEditorSaved
 	setAttr ".tgi[0].ni[11].x" -444.28570556640625;
 	setAttr ".tgi[0].ni[11].y" -547.14288330078125;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-createNode polyChipOff -n "Human_Latest:polyChipOff1";
+createNode polyChipOff -n "FoxGirl_Latest:Human_Latest:polyChipOff1";
 	rename -uid "5AC04F76-D147-61AC-9A1B-538BC435458D";
 	setAttr ".ics" -type "componentList" 3 "f[9:18]" "f[29:38]" "f[49:58]";
 	setAttr ".ix" -type "matrix" 2.2204460492503131e-16 1.0000000000000002 0 0 -1.0000000000000002 2.2204460492503131e-16 0 0
@@ -6131,35 +6353,35 @@ createNode polyChipOff -n "Human_Latest:polyChipOff1";
 	setAttr ".pvt" -type "float3" 0 1.1274918 0 ;
 	setAttr ".rs" 923186805;
 	setAttr ".dup" no;
-createNode polySeparate -n "Human_Latest:polySeparate1";
+createNode polySeparate -n "FoxGirl_Latest:Human_Latest:polySeparate1";
 	rename -uid "EA718671-1246-1B4E-2016-FABE40E14DC2";
 	setAttr ".ic" 2;
 	setAttr -s 2 ".out";
-createNode groupId -n "Human_Latest:groupId4";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId4";
 	rename -uid "1D7A8CFC-9F41-56A5-3C49-DFB0B7D09FD3";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts1";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts1";
 	rename -uid "D8E10403-0248-7357-2C1C-8B8F4A1F6277";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:59]";
-createNode groupId -n "Human_Latest:groupId5";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId5";
 	rename -uid "35A95B61-2F4F-8157-2AEC-8F977BD943E7";
 	setAttr ".ihi" 0;
-createNode groupId -n "Human_Latest:groupId6";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId6";
 	rename -uid "18F70E0E-6643-9345-7986-6299921CEAE7";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts2";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts2";
 	rename -uid "BC8EB154-4F45-86BF-B9E9-08AC12F12AAD";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:29]";
-createNode groupId -n "Human_Latest:groupId7";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId7";
 	rename -uid "1CE497EC-F14C-B4D3-E737-489DF18A5573";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts3";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts3";
 	rename -uid "BB6BDDF3-7C47-C631-328C-89B7A8E935EA";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:29]";
-createNode polyChipOff -n "Human_Latest:polyChipOff2";
+createNode polyChipOff -n "FoxGirl_Latest:Human_Latest:polyChipOff2";
 	rename -uid "E448AFAA-4946-9169-07E3-F9A909D18543";
 	setAttr ".ics" -type "componentList" 3 "f[9:18]" "f[29:38]" "f[49:58]";
 	setAttr ".ix" -type "matrix" 2.2204460492503131e-16 1.0000000000000002 0 0 -1.0000000000000002 2.2204460492503131e-16 0 0
@@ -6168,37 +6390,37 @@ createNode polyChipOff -n "Human_Latest:polyChipOff2";
 	setAttr ".pvt" -type "float3" 0 1.1274918 0 ;
 	setAttr ".rs" 1772754414;
 	setAttr ".dup" no;
-createNode polySeparate -n "Human_Latest:polySeparate2";
+createNode polySeparate -n "FoxGirl_Latest:Human_Latest:polySeparate2";
 	rename -uid "32F5CB24-F040-D85B-D8C3-009B36EC1833";
 	setAttr ".ic" 2;
 	setAttr -s 2 ".out";
-createNode groupId -n "Human_Latest:groupId8";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId8";
 	rename -uid "76D75237-6A40-C561-0D50-35AD5708003C";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts4";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts4";
 	rename -uid "DB3551F8-9B4D-803D-B0CE-3E9643BBF3A1";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:59]";
-createNode groupId -n "Human_Latest:groupId9";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId9";
 	rename -uid "9F8E671E-B741-DB83-5349-6387D153F60B";
 	setAttr ".ihi" 0;
-createNode groupId -n "Human_Latest:groupId10";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId10";
 	rename -uid "91B79CCC-294E-12D4-2AEB-AEB3709034AD";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts5";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts5";
 	rename -uid "057A42AE-BD4C-DD22-F213-56A03E5CE754";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:29]";
-createNode groupId -n "Human_Latest:groupId11";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId11";
 	rename -uid "6809E7BD-B245-75A8-6B1A-A081A5D6AA9F";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts6";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts6";
 	rename -uid "E3C93AE4-CC4D-C559-F471-B8BEF69676EF";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:29]";
-createNode ikRPsolver -n "Human_Latest:ikRPsolver";
+createNode ikRPsolver -n "FoxGirl_Latest:Human_Latest:ikRPsolver";
 	rename -uid "4F8E342F-8B4B-8B0F-4490-43B2BBE0AE4C";
-createNode skinCluster -n "Human_Latest:skinCluster1";
+createNode skinCluster -n "FoxGirl_Latest:Human_Latest:skinCluster1";
 	rename -uid "D80F3D9A-EC4B-299F-5489-E7B8EFC5513A";
 	setAttr ".skm" 1;
 	setAttr -s 518 ".wl";
@@ -7268,53 +7490,53 @@ createNode skinCluster -n "Human_Latest:skinCluster1";
 	setAttr ".ucm" yes;
 	setAttr ".hmf" 0.68;
 	setAttr -s 18 ".ifcl";
-createNode groupId -n "Human_Latest:groupId12";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId12";
 	rename -uid "68C0DB3E-8049-A62A-9A71-E49D6DF68DEF";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts7";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts7";
 	rename -uid "AB718AD4-E345-64F2-1436-9D93B5CDF2FF";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 21 "f[0:3]" "f[8:11]" "f[24:27]" "f[32:35]" "f[105:106]" "f[108:109]" "f[114:115]" "f[118:119]" "f[122:123]" "f[126:209]" "f[212:213]" "f[216:217]" "f[220:221]" "f[224:225]" "f[228:229]" "f[280:311]" "f[388]" "f[403:410]" "f[429:436]" "f[451:458]" "f[477:499]";
-createNode groupId -n "Human_Latest:groupId13";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId13";
 	rename -uid "EB9FF86A-E64B-F0ED-EF0B-BCB6BF5C8195";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts8";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts8";
 	rename -uid "9C4A0CE9-964D-669A-FACE-0E9FACA792A7";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 24 "f[4:7]" "f[12:23]" "f[28:31]" "f[36:39]" "f[42:43]" "f[46:47]" "f[50:51]" "f[54:55]" "f[58:59]" "f[62:63]" "f[66:67]" "f[70:103]" "f[210:211]" "f[214:215]" "f[218:219]" "f[222:223]" "f[226:227]" "f[230:279]" "f[312:387]" "f[389:402]" "f[413:426]" "f[437:450]" "f[461:474]" "f[500:515]";
-createNode groupId -n "Human_Latest:groupId14";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId14";
 	rename -uid "FFCB7774-F646-78A6-5B52-538971B5D2EF";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts9";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts9";
 	rename -uid "9817D5D9-D242-8FDC-90FB-C39102831647";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 18 "f[40:41]" "f[44:45]" "f[48:49]" "f[52:53]" "f[56:57]" "f[60:61]" "f[64:65]" "f[68:69]" "f[104]" "f[107]" "f[110:113]" "f[116:117]" "f[120:121]" "f[124:125]" "f[411:412]" "f[427:428]" "f[459:460]" "f[475:476]";
 	setAttr ".irc" -type "componentList" 13 "f[42:43]" "f[46:47]" "f[50:51]" "f[54:55]" "f[58:59]" "f[62:63]" "f[66:67]" "f[70:103]" "f[312:359]" "f[413:418]" "f[421:426]" "f[461:466]" "f[469:474]";
-createNode tweak -n "Human_Latest:tweak1";
+createNode tweak -n "FoxGirl_Latest:Human_Latest:tweak1";
 	rename -uid "B6F46760-DE41-51CE-BB1B-4689929A9F95";
-createNode objectSet -n "Human_Latest:skinCluster1Set";
+createNode objectSet -n "FoxGirl_Latest:Human_Latest:skinCluster1Set";
 	rename -uid "D6F02735-4440-2018-1E6C-81B0BBCE73E9";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "Human_Latest:skinCluster1GroupId";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:skinCluster1GroupId";
 	rename -uid "AA1036C3-E148-D406-54C5-9585040C1684";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:skinCluster1GroupParts";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:skinCluster1GroupParts";
 	rename -uid "6901F530-1E4D-DF1C-8539-15B75E04B89E";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode objectSet -n "Human_Latest:tweakSet1";
+createNode objectSet -n "FoxGirl_Latest:Human_Latest:tweakSet1";
 	rename -uid "1BB44311-0F4B-49A5-514B-D386955E3C9B";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "Human_Latest:groupId16";
+createNode groupId -n "FoxGirl_Latest:Human_Latest:groupId16";
 	rename -uid "BC59F009-3741-3FB0-148F-6F99E715DE20";
 	setAttr ".ihi" 0;
-createNode groupParts -n "Human_Latest:groupParts11";
+createNode groupParts -n "FoxGirl_Latest:Human_Latest:groupParts11";
 	rename -uid "CE8A518E-274F-5741-AF0D-EBB48F5AE7E9";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode dagPose -n "Human_Latest:bindPose1";
+createNode dagPose -n "FoxGirl_Latest:Human_Latest:bindPose1";
 	rename -uid "BB519A1D-434A-D8B5-6E01-CAB48E148AEA";
 	setAttr -s 19 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -7379,84 +7601,127 @@ createNode dagPose -n "Human_Latest:bindPose1";
 	setAttr -s 20 ".g[0:19]" yes no no no no no no no no no no no no no 
 		no no no no no no;
 	setAttr ".bp" yes;
-createNode animCurveTL -n "YoungSamLatest_persp_translateX";
+createNode animCurveTL -n "FoxGirl_Latest:YoungSamLatest_persp_translateX";
 	rename -uid "794913ED-484A-0F8A-BEF0-AA8F5EED1D23";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1.201549567991403;
-createNode animCurveTL -n "YoungSamLatest_persp_translateY";
+createNode animCurveTL -n "FoxGirl_Latest:YoungSamLatest_persp_translateY";
 	rename -uid "E5E2DAD5-DC48-1A1F-F46B-409CD0936AEA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1.0674802995132728;
-createNode animCurveTL -n "YoungSamLatest_persp_translateZ";
+createNode animCurveTL -n "FoxGirl_Latest:YoungSamLatest_persp_translateZ";
 	rename -uid "9E444062-3341-2569-EAFD-FCBC9AF4A36C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 2.6218875095769354;
-createNode animCurveTA -n "YoungSamLatest_persp_rotateX";
+createNode animCurveTA -n "FoxGirl_Latest:YoungSamLatest_persp_rotateX";
 	rename -uid "87614D34-9C48-43C9-3AC6-68B8FFE482EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 -6.3383527296025761;
-createNode animCurveTA -n "YoungSamLatest_persp_rotateY";
+createNode animCurveTA -n "FoxGirl_Latest:YoungSamLatest_persp_rotateY";
 	rename -uid "B0779C00-8042-B6C1-9567-95A707401649";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 24.600000000000176;
-createNode animCurveTA -n "YoungSamLatest_persp_rotateZ";
+createNode animCurveTA -n "FoxGirl_Latest:YoungSamLatest_persp_rotateZ";
 	rename -uid "26A27A80-5842-1470-C5B4-B492D6F1756C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 2.1862821506265056e-16;
-createNode animCurveTU -n "YoungSamLatest_persp_scaleX";
+createNode animCurveTU -n "FoxGirl_Latest:YoungSamLatest_persp_scaleX";
 	rename -uid "0050CBFB-1845-884B-CDFC-11AEAFCF8D39";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "YoungSamLatest_persp_scaleY";
+createNode animCurveTU -n "FoxGirl_Latest:YoungSamLatest_persp_scaleY";
 	rename -uid "81A8EFCB-A94E-55C1-5FF0-08A57E2D1C23";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "YoungSamLatest_persp_scaleZ";
+createNode animCurveTU -n "FoxGirl_Latest:YoungSamLatest_persp_scaleZ";
 	rename -uid "56F1306A-9F4A-8808-BA39-D49E04D6F516";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode aiAOVFilter -s -n "defaultArnoldFilter";
-	rename -uid "E6B21137-8144-5D80-F13C-7F900495ED7B";
-	setAttr ".ai_translator" -type "string" "contour";
-createNode aiAOVDriver -s -n "defaultArnoldDriver";
-	rename -uid "317C0FF9-D84E-8FBC-93CF-50920C83ADE7";
-	setAttr ".ai_translator" -type "string" "exr";
-createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
-	rename -uid "CBFA569C-C448-61B4-FB03-DEA42B3B3716";
-	setAttr ".output_mode" 0;
-	setAttr ".ai_translator" -type "string" "maya";
-createNode polyTorus -n "polyTorus1";
+createNode polyTorus -n "FoxGirl_Latest:polyTorus1";
 	rename -uid "E1B232C9-2B4D-7B05-E0A7-6C869AC8A5D3";
 	setAttr ".r" 0.302;
 	setAttr ".sr" 0.01;
 	setAttr ".sh" 4;
-createNode ramp -n "ramp1";
+createNode ramp -n "FoxGirl_Latest:ramp1";
 	rename -uid "06720286-DC4A-8CA6-B02F-C19AE0ED9A1D";
 	setAttr ".in" 0;
 	setAttr -s 2 ".cel";
 	setAttr ".cel[0].ep" 0;
-	setAttr ".cel[0].ec" -type "float3" 0.51247203 0.56250906 0.65200001 ;
+	setAttr ".cel[0].ec" -type "float3" 0.49000001 0.048806552 0.044590011 ;
 	setAttr ".cel[1].ep" 0.5;
-	setAttr ".cel[1].ec" -type "float3" 1 1 1 ;
-createNode place2dTexture -n "place2dTexture1";
+	setAttr ".cel[1].ec" -type "float3" 0.83879375 0.12743995 0.074213602 ;
+createNode place2dTexture -n "FoxGirl_Latest:place2dTexture1";
 	rename -uid "E2160AB1-2E40-1FCB-5DDE-98BDABEE14F9";
-createNode polySphere -n "polySphere1";
+createNode polySphere -n "FoxGirl_Latest:polySphere1";
 	rename -uid "4F90D82F-E043-6E5E-D2B7-FDB45C69DF32";
-createNode polyCube -n "polyCube1";
+createNode polyCube -n "FoxGirl_Latest:polyCube1";
 	rename -uid "5F4E3C3B-1D48-295B-ED3A-B98E616080CD";
 	setAttr ".cuv" 4;
+createNode aiToon -n "dressShader";
+	rename -uid "ED48AFF7-EC4E-1B29-B9EE-E3A286332CC1";
+	setAttr ".rim_light_width" 0.40000000596046448;
+createNode ramp -n "rim_ramp";
+	rename -uid "8AD49293-4D41-BA50-ECA6-7F9C4BEBFF8E";
+	setAttr ".in" 0;
+	setAttr -s 2 ".cel";
+	setAttr ".cel[0].ep" 0;
+	setAttr ".cel[0].ec" -type "float3" 0 0 0 ;
+	setAttr ".cel[1].ep" 0.50299400091171265;
+	setAttr ".cel[1].ec" -type "float3" 1 1 1 ;
+createNode place2dTexture -n "place2dTexture2";
+	rename -uid "4D13AD71-CB44-599C-CC35-C6B93DD1B726";
+createNode ramp -n "ramp8";
+	rename -uid "5B6138BC-B945-64B5-9893-D083DA3ECF9F";
+	setAttr ".in" 0;
+	setAttr -s 2 ".cel";
+	setAttr ".cel[0].ep" 0.0029940120875835419;
+	setAttr ".cel[0].ec" -type "float3" 0.45277801 0.50109369 0.579 ;
+	setAttr ".cel[1].ep" 0.50574713945388794;
+	setAttr ".cel[1].ec" -type "float3" 1 1 1 ;
+createNode place2dTexture -n "place2dTexture8";
+	rename -uid "22CBFDB7-7B49-FEB6-0795-BA9823044098";
+createNode shadingEngine -n "dressShaderSG";
+	rename -uid "4D0CD256-0C4D-3704-E8DF-55AABC801C1A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo10";
+	rename -uid "1CE6A7B6-2A4C-4251-190A-54A16325421C";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "8A71C52C-654C-7998-30A4-BBB2F1BA701D";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -450.59522019019283 -220.83332455820545 ;
+	setAttr ".tgi[0].vh" -type "double2" 726.78568540584592 227.97618141723098 ;
+	setAttr -s 6 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -270;
+	setAttr ".tgi[0].ni[0].y" 127.14286041259766;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 37.142856597900391;
+	setAttr ".tgi[0].ni[1].y" -17.142856597900391;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" -270;
+	setAttr ".tgi[0].ni[2].y" -38.571430206298828;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 37.142856597900391;
+	setAttr ".tgi[0].ni[3].y" 148.57142639160156;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 344.28570556640625;
+	setAttr ".tgi[0].ni[4].y" 157.14285278320312;
+	setAttr ".tgi[0].ni[4].nvs" 2066;
+	setAttr ".tgi[0].ni[5].x" 384.28570556640625;
+	setAttr ".tgi[0].ni[5].y" -74.285713195800781;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
 select -ne :time1;
-	setAttr ".o" 24;
-	setAttr ".unw" 24;
+	setAttr ".o" 16;
+	setAttr ".unw" 16;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -7464,20 +7729,21 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 7 ".st";
+	setAttr -s 10 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 10 ".s";
+	setAttr -s 13 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 3 ".u";
+	setAttr -s 6 ".u";
 select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
 select -ne :lightList1;
 select -ne :defaultTextureList1;
-	setAttr -s 3 ".tx";
+	setAttr -s 6 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -7489,1011 +7755,1286 @@ select -ne :defaultRenderGlobals;
 	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
+	setAttr ".dar" 1.7769999504089355;
 select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-connectAttr "YoungSamLatest_persp_translateX.o" ":persp.tx";
-connectAttr "YoungSamLatest_persp_translateY.o" ":persp.ty";
-connectAttr "YoungSamLatest_persp_translateZ.o" ":persp.tz";
-connectAttr "YoungSamLatest_persp_rotateX.o" ":persp.rx";
-connectAttr "YoungSamLatest_persp_rotateY.o" ":persp.ry";
-connectAttr "YoungSamLatest_persp_rotateZ.o" ":persp.rz";
-connectAttr "YoungSamLatest_persp_scaleX.o" ":persp.sx";
-connectAttr "YoungSamLatest_persp_scaleY.o" ":persp.sy";
-connectAttr "YoungSamLatest_persp_scaleZ.o" ":persp.sz";
-connectAttr "Human_Latest:thigh_right.msg" "Human_Latest:right_leg_ikHandle1.hsj"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.msg" "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.hsj"
 		;
-connectAttr "Human_Latest:effector1.hp" "Human_Latest:right_leg_ikHandle1.hee";
-connectAttr "Human_Latest:ikRPsolver.msg" "Human_Latest:right_leg_ikHandle1.hsv"
+connectAttr "FoxGirl_Latest:Human_Latest:effector1.hp" "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.hee"
 		;
-connectAttr "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.ctx" "Human_Latest:right_leg_ikHandle1.pvx"
+connectAttr "FoxGirl_Latest:Human_Latest:ikRPsolver.msg" "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.hsv"
 		;
-connectAttr "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.cty" "Human_Latest:right_leg_ikHandle1.pvy"
+connectAttr "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.ctx" "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.pvx"
 		;
-connectAttr "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.ctz" "Human_Latest:right_leg_ikHandle1.pvz"
+connectAttr "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.cty" "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.pvy"
 		;
-connectAttr "Human_Latest:right_leg_ikHandle1.pim" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.cpim"
+connectAttr "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.ctz" "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.pvz"
 		;
-connectAttr "Human_Latest:thigh_right.pm" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.ps"
+connectAttr "FoxGirl_Latest:Human_Latest:right_leg_ikHandle1.pim" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.cpim"
 		;
-connectAttr "Human_Latest:thigh_right.t" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.pm" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.ps"
 		;
-connectAttr "YoungSamLatest_leftLegDirection.t" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].tt"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.t" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.crp"
 		;
-connectAttr "YoungSamLatest_leftLegDirection.rp" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:YoungSamLatest_leftLegDirection.t" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].tt"
 		;
-connectAttr "YoungSamLatest_leftLegDirection.rpt" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].trt"
+connectAttr "FoxGirl_Latest:YoungSamLatest_leftLegDirection.rp" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].trp"
 		;
-connectAttr "YoungSamLatest_leftLegDirection.pm" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:YoungSamLatest_leftLegDirection.rpt" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].trt"
 		;
-connectAttr "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.w0" "YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:YoungSamLatest_leftLegDirection.pm" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].tpm"
 		;
-connectAttr "Human_Latest:thigh_left.msg" "Human_Latest:left_leg_ikHandle2.hsj";
-connectAttr "Human_Latest:effector2.hp" "Human_Latest:left_leg_ikHandle2.hee";
-connectAttr "Human_Latest:ikRPsolver.msg" "Human_Latest:left_leg_ikHandle2.hsv";
-connectAttr "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.ctx" "Human_Latest:left_leg_ikHandle2.pvx"
+connectAttr "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.w0" "FoxGirl_Latest:YoungSamLatest_right_leg_ikHandle1_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.cty" "Human_Latest:left_leg_ikHandle2.pvy"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.msg" "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.hsj"
 		;
-connectAttr "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.ctz" "Human_Latest:left_leg_ikHandle2.pvz"
+connectAttr "FoxGirl_Latest:Human_Latest:effector2.hp" "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.hee"
 		;
-connectAttr "Human_Latest:left_leg_ikHandle2.pim" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.cpim"
+connectAttr "FoxGirl_Latest:Human_Latest:ikRPsolver.msg" "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.hsv"
 		;
-connectAttr "Human_Latest:thigh_left.pm" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.ps"
+connectAttr "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.ctx" "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.pvx"
 		;
-connectAttr "Human_Latest:thigh_left.t" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.crp"
+connectAttr "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.cty" "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.pvy"
 		;
-connectAttr "YoungSamLatest_rightLegDirection.t" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].tt"
+connectAttr "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.ctz" "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.pvz"
 		;
-connectAttr "YoungSamLatest_rightLegDirection.rp" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:Human_Latest:left_leg_ikHandle2.pim" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.cpim"
 		;
-connectAttr "YoungSamLatest_rightLegDirection.rpt" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].trt"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.pm" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.ps"
 		;
-connectAttr "YoungSamLatest_rightLegDirection.pm" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.t" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.crp"
 		;
-connectAttr "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.w0" "YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:YoungSamLatest_rightLegDirection.t" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].tt"
 		;
-connectAttr "Human_Latest:torso_parentConstraint1.ctx" "Human_Latest:torso.tx";
-connectAttr "Human_Latest:torso_parentConstraint1.cty" "Human_Latest:torso.ty";
-connectAttr "Human_Latest:torso_parentConstraint1.ctz" "Human_Latest:torso.tz";
-connectAttr "Human_Latest:torso_parentConstraint1.crx" "Human_Latest:torso.rx";
-connectAttr "Human_Latest:torso_parentConstraint1.cry" "Human_Latest:torso.ry";
-connectAttr "Human_Latest:torso_parentConstraint1.crz" "Human_Latest:torso.rz";
-connectAttr "Human_Latest:torso.s" "Human_Latest:thigh_right.is";
-connectAttr "Human_Latest:thigh_right.s" "Human_Latest:knee_right.is";
-connectAttr "Human_Latest:knee_right.s" "Human_Latest:foot_right.is";
-connectAttr "Human_Latest:foot_right.tx" "Human_Latest:effector1.tx";
-connectAttr "Human_Latest:foot_right.ty" "Human_Latest:effector1.ty";
-connectAttr "Human_Latest:foot_right.tz" "Human_Latest:effector1.tz";
-connectAttr "Human_Latest:torso.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.is"
+connectAttr "FoxGirl_Latest:YoungSamLatest_rightLegDirection.rp" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].trp"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.tx"
+connectAttr "FoxGirl_Latest:YoungSamLatest_rightLegDirection.rpt" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].trt"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.ty"
+connectAttr "FoxGirl_Latest:YoungSamLatest_rightLegDirection.pm" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].tpm"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.tz"
+connectAttr "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.w0" "FoxGirl_Latest:YoungSamLatest_left_leg_ikHandle2_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.rx"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.ctx" "FoxGirl_Latest:Human_Latest:torso.tx"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.ry"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.cty" "FoxGirl_Latest:Human_Latest:torso.ty"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.rz"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.ctz" "FoxGirl_Latest:Human_Latest:torso.tz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.is"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.crx" "FoxGirl_Latest:Human_Latest:torso.rx"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.tx"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.cry" "FoxGirl_Latest:Human_Latest:torso.ry"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.ty"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.crz" "FoxGirl_Latest:Human_Latest:torso.rz"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.tz"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.s" "FoxGirl_Latest:Human_Latest:thigh_right.is"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.rx"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.s" "FoxGirl_Latest:Human_Latest:knee_right.is"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.ry"
+connectAttr "FoxGirl_Latest:Human_Latest:knee_right.s" "FoxGirl_Latest:Human_Latest:foot_right.is"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.rz"
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.tx" "FoxGirl_Latest:Human_Latest:effector1.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.is"
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.ty" "FoxGirl_Latest:Human_Latest:effector1.ty"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.tx"
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.tz" "FoxGirl_Latest:Human_Latest:effector1.tz"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.ty"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.is"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.tz"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.tx"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rx"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.ty"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.ry"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.tz"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rz"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck|Human_Latest:head.is"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.ro" "Human_Latest:neck_parentConstraint1.cro"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.pim" "Human_Latest:neck_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rp" "Human_Latest:neck_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rpt" "Human_Latest:neck_parentConstraint1.crt"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.jo" "Human_Latest:neck_parentConstraint1.cjo"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.tz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.t" "Human_Latest:neck_parentConstraint1.tg[0].tt"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rp" "Human_Latest:neck_parentConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rpt" "Human_Latest:neck_parentConstraint1.tg[0].trt"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.r" "Human_Latest:neck_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.ro" "Human_Latest:neck_parentConstraint1.tg[0].tro"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.s" "Human_Latest:neck_parentConstraint1.tg[0].ts"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.pm" "Human_Latest:neck_parentConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.tz"
 		;
-connectAttr "Human_Latest:neck_parentConstraint1.w0" "Human_Latest:neck_parentConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.is"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.ry"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.tx"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rz"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.ty"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck|FoxGirl_Latest:Human_Latest:head.is"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.tz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.ro" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.cro"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.rx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.pim" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.cpim"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.ry"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rp" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.crp"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.rz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rpt" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.is"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.jo" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.cjo"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.tx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.t" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].tt"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.ty"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rp" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].trp"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.tz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rpt" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].trt"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.rx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.r" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.ry"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.ro" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].tro"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.rz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.s" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.is"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.pm" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.tx"
+connectAttr "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:neck_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.ty"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.is"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.tz"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.tx"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.rx"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.ty"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.ry"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.tz"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.rz"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.s" "Human_Latest:right_hand.is"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.ro" "Human_Latest:right_wrist_parentConstraint1.cro"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.pim" "Human_Latest:right_wrist_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.rp" "Human_Latest:right_wrist_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.rpt" "Human_Latest:right_wrist_parentConstraint1.crt"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.jo" "Human_Latest:right_wrist_parentConstraint1.cjo"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.tz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.t" "Human_Latest:right_wrist_parentConstraint1.tg[0].tt"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.rp" "Human_Latest:right_wrist_parentConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.rpt" "Human_Latest:right_wrist_parentConstraint1.tg[0].trt"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.r" "Human_Latest:right_wrist_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.ro" "Human_Latest:right_wrist_parentConstraint1.tg[0].tro"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.s" "Human_Latest:right_wrist_parentConstraint1.tg[0].ts"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.pm" "Human_Latest:right_wrist_parentConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.tz"
 		;
-connectAttr "Human_Latest:right_wrist_parentConstraint1.w0" "Human_Latest:right_wrist_parentConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.ro" "Human_Latest:right_elbow_parentConstraint1.cro"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.pim" "Human_Latest:right_elbow_parentConstraint1.cpim"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.rp" "Human_Latest:right_elbow_parentConstraint1.crp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.s" "FoxGirl_Latest:Human_Latest:right_hand.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.rpt" "Human_Latest:right_elbow_parentConstraint1.crt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.ro" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.cro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.jo" "Human_Latest:right_elbow_parentConstraint1.cjo"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.pim" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.cpim"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.t" "Human_Latest:right_elbow_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.rp" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.crp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.rp" "Human_Latest:right_elbow_parentConstraint1.tg[0].trp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.rpt" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.rpt" "Human_Latest:right_elbow_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.jo" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.cjo"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.r" "Human_Latest:right_elbow_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.t" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.ro" "Human_Latest:right_elbow_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.rp" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.s" "Human_Latest:right_elbow_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.rpt" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.pm" "Human_Latest:right_elbow_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.r" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:right_elbow_parentConstraint1.w0" "Human_Latest:right_elbow_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.ro" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.ro" "Human_Latest:right_shoulder_parentConstraint1.cro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.s" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.pim" "Human_Latest:right_shoulder_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.pm" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.rp" "Human_Latest:right_shoulder_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:right_wrist_parentConstraint1.tg[0].tw"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.rpt" "Human_Latest:right_shoulder_parentConstraint1.crt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.ro" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.cro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.jo" "Human_Latest:right_shoulder_parentConstraint1.cjo"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.pim" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.cpim"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.t" "Human_Latest:right_shoulder_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.rp" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.crp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.rp" "Human_Latest:right_shoulder_parentConstraint1.tg[0].trp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.rpt" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.rpt" "Human_Latest:right_shoulder_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.jo" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.cjo"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.r" "Human_Latest:right_shoulder_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.t" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.ro" "Human_Latest:right_shoulder_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.rp" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.s" "Human_Latest:right_shoulder_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.rpt" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.pm" "Human_Latest:right_shoulder_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.r" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:right_shoulder_parentConstraint1.w0" "Human_Latest:right_shoulder_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.ro" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.is"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.s" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].ts"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.tx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.pm" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.ty"
+connectAttr "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:right_elbow_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.tz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.ro" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.cro"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.rx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.pim" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.cpim"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.ry"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.rp" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.crp"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.rz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.rpt" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.is"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.jo" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.cjo"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.tx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.t" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].tt"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.ty"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.rp" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].trp"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.tz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.rpt" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].trt"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.rx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.r" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.ry"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.ro" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].tro"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.rz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.s" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.s" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.is"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.pm" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.tx"
+connectAttr "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:right_shoulder_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.ty"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.is"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.tz"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.tx"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.rx"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.ty"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.ry"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.tz"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.rz"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.s" "Human_Latest:left_hand.is"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.ro" "Human_Latest:left_wrist_parentConstraint1.cro"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.pim" "Human_Latest:left_wrist_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.rp" "Human_Latest:left_wrist_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.rpt" "Human_Latest:left_wrist_parentConstraint1.crt"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.jo" "Human_Latest:left_wrist_parentConstraint1.cjo"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.tz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.t" "Human_Latest:left_wrist_parentConstraint1.tg[0].tt"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.rp" "Human_Latest:left_wrist_parentConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.rpt" "Human_Latest:left_wrist_parentConstraint1.tg[0].trt"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.r" "Human_Latest:left_wrist_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.s" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.ro" "Human_Latest:left_wrist_parentConstraint1.tg[0].tro"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.s" "Human_Latest:left_wrist_parentConstraint1.tg[0].ts"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.pm" "Human_Latest:left_wrist_parentConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.tz"
 		;
-connectAttr "Human_Latest:left_wrist_parentConstraint1.w0" "Human_Latest:left_wrist_parentConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.ro" "Human_Latest:left_elbow_parentConstraint1.cro"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.pim" "Human_Latest:left_elbow_parentConstraint1.cpim"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.rp" "Human_Latest:left_elbow_parentConstraint1.crp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.s" "FoxGirl_Latest:Human_Latest:left_hand.is"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.rpt" "Human_Latest:left_elbow_parentConstraint1.crt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.ro" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.cro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.jo" "Human_Latest:left_elbow_parentConstraint1.cjo"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.pim" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.cpim"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.t" "Human_Latest:left_elbow_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.rp" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.crp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.rp" "Human_Latest:left_elbow_parentConstraint1.tg[0].trp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.rpt" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.rpt" "Human_Latest:left_elbow_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.jo" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.cjo"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.r" "Human_Latest:left_elbow_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.t" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.ro" "Human_Latest:left_elbow_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.rp" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.s" "Human_Latest:left_elbow_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.rpt" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.pm" "Human_Latest:left_elbow_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.r" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:left_elbow_parentConstraint1.w0" "Human_Latest:left_elbow_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.ro" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.ro" "Human_Latest:left_shoulder_parentConstraint1.cro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.s" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.pim" "Human_Latest:left_shoulder_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.pm" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.rp" "Human_Latest:left_shoulder_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:left_wrist_parentConstraint1.tg[0].tw"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.rpt" "Human_Latest:left_shoulder_parentConstraint1.crt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.ro" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.cro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.jo" "Human_Latest:left_shoulder_parentConstraint1.cjo"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.pim" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.cpim"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.t" "Human_Latest:left_shoulder_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.rp" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.crp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.rp" "Human_Latest:left_shoulder_parentConstraint1.tg[0].trp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.rpt" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.rpt" "Human_Latest:left_shoulder_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.jo" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.cjo"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.r" "Human_Latest:left_shoulder_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.t" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.ro" "Human_Latest:left_shoulder_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.rp" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.s" "Human_Latest:left_shoulder_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.rpt" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.pm" "Human_Latest:left_shoulder_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.r" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:left_shoulder_parentConstraint1.w0" "Human_Latest:left_shoulder_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.ro" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.ro" "Human_Latest:chest_parentConstraint1.cro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.s" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.pim" "Human_Latest:chest_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.pm" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.rp" "Human_Latest:chest_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:left_elbow_parentConstraint1.tg[0].tw"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.rpt" "Human_Latest:chest_parentConstraint1.crt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.ro" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.cro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.jo" "Human_Latest:chest_parentConstraint1.cjo"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.pim" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.cpim"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.t" "Human_Latest:chest_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.rp" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.crp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.rp" "Human_Latest:chest_parentConstraint1.tg[0].trp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.rpt" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.rpt" "Human_Latest:chest_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.jo" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.cjo"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.r" "Human_Latest:chest_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.t" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.ro" "Human_Latest:chest_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.rp" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.s" "Human_Latest:chest_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.rpt" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest.pm" "Human_Latest:chest_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.r" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:chest_parentConstraint1.w0" "Human_Latest:chest_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.ro" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.ro" "Human_Latest:back_parentConstraint1.cro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.s" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.pim" "Human_Latest:back_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.pm" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.rp" "Human_Latest:back_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:left_shoulder_parentConstraint1.tg[0].tw"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.rpt" "Human_Latest:back_parentConstraint1.crt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.ro" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.cro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.jo" "Human_Latest:back_parentConstraint1.cjo"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.pim" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.cpim"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.t" "Human_Latest:back_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.rp" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.crp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.rp" "Human_Latest:back_parentConstraint1.tg[0].trp"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.rpt" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.crt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.rpt" "Human_Latest:back_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.jo" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.cjo"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.r" "Human_Latest:back_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.t" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.ro" "Human_Latest:back_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.rp" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.s" "Human_Latest:back_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.rpt" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back.pm" "Human_Latest:back_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.r" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:back_parentConstraint1.w0" "Human_Latest:back_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.ro" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].tro"
 		;
-connectAttr "Human_Latest:torso.s" "Human_Latest:thigh_left.is";
-connectAttr "Human_Latest:thigh_left.s" "Human_Latest:knee_left.is";
-connectAttr "Human_Latest:knee_left.s" "Human_Latest:foot_left.is";
-connectAttr "Human_Latest:foot_left.tx" "Human_Latest:effector2.tx";
-connectAttr "Human_Latest:foot_left.ty" "Human_Latest:effector2.ty";
-connectAttr "Human_Latest:foot_left.tz" "Human_Latest:effector2.tz";
-connectAttr "Human_Latest:torso.ro" "Human_Latest:torso_parentConstraint1.cro";
-connectAttr "Human_Latest:torso.pim" "Human_Latest:torso_parentConstraint1.cpim"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.s" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].ts"
 		;
-connectAttr "Human_Latest:torso.rp" "Human_Latest:torso_parentConstraint1.crp";
-connectAttr "Human_Latest:torso.rpt" "Human_Latest:torso_parentConstraint1.crt";
-connectAttr "Human_Latest:torso.jo" "Human_Latest:torso_parentConstraint1.cjo";
-connectAttr "Human_Latest:waist.t" "Human_Latest:torso_parentConstraint1.tg[0].tt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.pm" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "Human_Latest:waist.rp" "Human_Latest:torso_parentConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:chest_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Human_Latest:waist.rpt" "Human_Latest:torso_parentConstraint1.tg[0].trt"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.ro" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.cro"
 		;
-connectAttr "Human_Latest:waist.r" "Human_Latest:torso_parentConstraint1.tg[0].tr"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.pim" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.cpim"
 		;
-connectAttr "Human_Latest:waist.ro" "Human_Latest:torso_parentConstraint1.tg[0].tro"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.rp" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.crp"
 		;
-connectAttr "Human_Latest:waist.s" "Human_Latest:torso_parentConstraint1.tg[0].ts"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.rpt" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.crt"
 		;
-connectAttr "Human_Latest:waist.pm" "Human_Latest:torso_parentConstraint1.tg[0].tpm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.jo" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.cjo"
 		;
-connectAttr "Human_Latest:torso_parentConstraint1.w0" "Human_Latest:torso_parentConstraint1.tg[0].tw"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.t" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].tt"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.ctx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.tx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.rp" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].trp"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.cty" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.ty"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.rpt" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].trt"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.ctz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.tz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.r" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].tr"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.crx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.rx"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.ro" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].tro"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.cry" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.ry"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.s" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].ts"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.crz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.rz"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back.pm" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "YoungSamLatest_head_scaleConstraint1.csx" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.sx"
+connectAttr "FoxGirl_Latest:Human_Latest:back_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:back_parentConstraint1.tg[0].tw"
 		;
-connectAttr "YoungSamLatest_head_scaleConstraint1.csy" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.sy"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.s" "FoxGirl_Latest:Human_Latest:thigh_left.is"
 		;
-connectAttr "YoungSamLatest_head_scaleConstraint1.csz" "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.sz"
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.s" "FoxGirl_Latest:Human_Latest:knee_left.is"
 		;
-connectAttr "Human_Latest:groupParts5.og" "Human_Latest:polySurfaceShape10.i";
-connectAttr "Human_Latest:groupId10.id" "Human_Latest:polySurfaceShape10.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:knee_left.s" "FoxGirl_Latest:Human_Latest:foot_left.is"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "Human_Latest:polySurfaceShape10.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.tx" "FoxGirl_Latest:Human_Latest:effector2.tx"
 		;
-connectAttr "Human_Latest:groupParts6.og" "Human_Latest:polySurfaceShape11.i";
-connectAttr "Human_Latest:groupId11.id" "Human_Latest:polySurfaceShape11.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.ty" "FoxGirl_Latest:Human_Latest:effector2.ty"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "Human_Latest:polySurfaceShape11.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.tz" "FoxGirl_Latest:Human_Latest:effector2.tz"
 		;
-connectAttr "Human_Latest:groupId8.id" "Human_Latest:polySurfaceShape3.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.ro" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.cro"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "Human_Latest:polySurfaceShape3.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.pim" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.cpim"
 		;
-connectAttr "Human_Latest:groupParts4.og" "Human_Latest:polySurfaceShape3.i";
-connectAttr "Human_Latest:groupId9.id" "Human_Latest:polySurfaceShape3.ciog.cog[0].cgid"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.rp" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.crp"
 		;
-connectAttr "Human_Latest:groupParts2.og" "Human_Latest:polySurfaceShape7.i";
-connectAttr "Human_Latest:groupId6.id" "Human_Latest:polySurfaceShape7.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.rpt" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.crt"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "Human_Latest:polySurfaceShape7.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:torso.jo" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.cjo"
 		;
-connectAttr "Human_Latest:groupParts3.og" "Human_Latest:polySurfaceShape8.i";
-connectAttr "Human_Latest:groupId7.id" "Human_Latest:polySurfaceShape8.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.t" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].tt"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "Human_Latest:polySurfaceShape8.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.rp" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].trp"
 		;
-connectAttr "Human_Latest:groupId4.id" "Human_Latest:polySurfaceShape1.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.rpt" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].trt"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "Human_Latest:polySurfaceShape1.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.r" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Human_Latest:groupParts1.og" "Human_Latest:polySurfaceShape1.i";
-connectAttr "Human_Latest:groupId5.id" "Human_Latest:polySurfaceShape1.ciog.cog[0].cgid"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.ro" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.ro" "YoungSamLatest_head_parentConstraint1.cro"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.s" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.pim" "YoungSamLatest_head_parentConstraint1.cpim"
+connectAttr "FoxGirl_Latest:Human_Latest:waist.pm" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.rp" "YoungSamLatest_head_parentConstraint1.crp"
+connectAttr "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.w0" "FoxGirl_Latest:Human_Latest:torso_parentConstraint1.tg[0].tw"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.rpt" "YoungSamLatest_head_parentConstraint1.crt"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.ctx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.tx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.t" "YoungSamLatest_head_parentConstraint1.tg[0].tt"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.cty" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.ty"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rp" "YoungSamLatest_head_parentConstraint1.tg[0].trp"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.ctz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.tz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.rpt" "YoungSamLatest_head_parentConstraint1.tg[0].trt"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.crx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.rx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.r" "YoungSamLatest_head_parentConstraint1.tg[0].tr"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.cry" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.ry"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.ro" "YoungSamLatest_head_parentConstraint1.tg[0].tro"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.crz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.rz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.s" "YoungSamLatest_head_parentConstraint1.tg[0].ts"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.csx" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.sx"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.pm" "YoungSamLatest_head_parentConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.csy" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.sy"
 		;
-connectAttr "YoungSamLatest_head_parentConstraint1.w0" "YoungSamLatest_head_parentConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.csz" "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.sz"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head.pim" "YoungSamLatest_head_scaleConstraint1.cpim"
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts5.og" "FoxGirl_Latest:Human_Latest:polySurfaceShape10.i"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.s" "YoungSamLatest_head_scaleConstraint1.tg[0].ts"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId10.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape10.iog.og[0].gid"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:waist|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.pm" "YoungSamLatest_head_scaleConstraint1.tg[0].tpm"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:Human_Latest:polySurfaceShape10.iog.og[0].gco"
 		;
-connectAttr "YoungSamLatest_head_scaleConstraint1.w0" "YoungSamLatest_head_scaleConstraint1.tg[0].tw"
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts6.og" "FoxGirl_Latest:Human_Latest:polySurfaceShape11.i"
 		;
-connectAttr "polyTorus1.out" "halfhalflineShape.i";
-connectAttr "polyCube1.out" "ear_roughShape.i";
-connectAttr "Human_Latest:groupId12.id" "YoungSamLatest_bodyShape.iog.og[0].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId11.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape11.iog.og[0].gid"
 		;
-connectAttr "Human_Latest:aiToon1SG.mwc" "YoungSamLatest_bodyShape.iog.og[0].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:Human_Latest:polySurfaceShape11.iog.og[0].gco"
 		;
-connectAttr "Human_Latest:groupId13.id" "YoungSamLatest_bodyShape.iog.og[1].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId8.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape3.iog.og[0].gid"
 		;
-connectAttr "Human_Latest:aiToon2SG.mwc" "YoungSamLatest_bodyShape.iog.og[1].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:Human_Latest:polySurfaceShape3.iog.og[0].gco"
 		;
-connectAttr "Human_Latest:groupId14.id" "YoungSamLatest_bodyShape.iog.og[2].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts4.og" "FoxGirl_Latest:Human_Latest:polySurfaceShape3.i"
 		;
-connectAttr "Human_Latest:aiToon3SG.mwc" "YoungSamLatest_bodyShape.iog.og[2].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId9.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape3.ciog.cog[0].cgid"
 		;
-connectAttr "Human_Latest:skinCluster1GroupId.id" "YoungSamLatest_bodyShape.iog.og[5].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts2.og" "FoxGirl_Latest:Human_Latest:polySurfaceShape7.i"
 		;
-connectAttr "Human_Latest:skinCluster1Set.mwc" "YoungSamLatest_bodyShape.iog.og[5].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId6.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape7.iog.og[0].gid"
 		;
-connectAttr "Human_Latest:groupId16.id" "YoungSamLatest_bodyShape.iog.og[6].gid"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:Human_Latest:polySurfaceShape7.iog.og[0].gco"
 		;
-connectAttr "Human_Latest:tweakSet1.mwc" "YoungSamLatest_bodyShape.iog.og[6].gco"
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts3.og" "FoxGirl_Latest:Human_Latest:polySurfaceShape8.i"
 		;
-connectAttr "Human_Latest:skinCluster1.og[0]" "YoungSamLatest_bodyShape.i";
-connectAttr "Human_Latest:tweak1.vl[0].vt[0]" "YoungSamLatest_bodyShape.twl";
-connectAttr "polySphere1.out" "pSphereShape1.i";
+connectAttr "FoxGirl_Latest:Human_Latest:groupId7.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape8.iog.og[0].gid"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:Human_Latest:polySurfaceShape8.iog.og[0].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId4.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape1.iog.og[0].gid"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:Human_Latest:polySurfaceShape1.iog.og[0].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts1.og" "FoxGirl_Latest:Human_Latest:polySurfaceShape1.i"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId5.id" "FoxGirl_Latest:Human_Latest:polySurfaceShape1.ciog.cog[0].cgid"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.ro" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.cro"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.pim" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.cpim"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.rp" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.crp"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.rpt" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.crt"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.t" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].tt"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rp" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].trp"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.rpt" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].trt"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.r" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].tr"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.ro" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].tro"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.s" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].ts"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.pm" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.w0" "FoxGirl_Latest:YoungSamLatest_head_parentConstraint1.tg[0].tw"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head.pim" "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.cpim"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.s" "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:waist|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.pm" "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.w0" "FoxGirl_Latest:YoungSamLatest_head_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "FoxGirl_Latest:polyTorus1.out" "FoxGirl_Latest:halfhalflineShape.i"
+		;
+connectAttr "groupParts10.og" "FoxGirl_Latest:ear_roughShape.i";
+connectAttr "groupId17.id" "FoxGirl_Latest:ear_roughShape.iog.og[0].gid";
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon3SG.mwc" "FoxGirl_Latest:ear_roughShape.iog.og[0].gco"
+		;
+connectAttr "groupId19.id" "FoxGirl_Latest:ear_roughShape.iog.og[1].gid";
+connectAttr "aiFlat1SG.mwc" "FoxGirl_Latest:ear_roughShape.iog.og[1].gco";
+connectAttr "groupId20.id" "FoxGirl_Latest:ear_roughShape.iog.og[2].gid";
+connectAttr "aiFlat2SG.mwc" "FoxGirl_Latest:ear_roughShape.iog.og[2].gco";
+connectAttr "groupId18.id" "FoxGirl_Latest:ear_roughShape.ciog.cog[0].cgid";
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon3SG.mwc" "ear_roughShape.iog.og[0].gco"
+		;
+connectAttr "groupId21.id" "ear_roughShape.iog.og[0].gid";
+connectAttr "groupId22.id" "ear_roughShape.iog.og[1].gid";
+connectAttr "aiFlat1SG.mwc" "ear_roughShape.iog.og[1].gco";
+connectAttr "groupId23.id" "ear_roughShape.iog.og[2].gid";
+connectAttr "aiFlat2SG.mwc" "ear_roughShape.iog.og[2].gco";
+connectAttr "groupId24.id" "ear_roughShape.ciog.cog[0].cgid";
+connectAttr "FoxGirl_Latest:Human_Latest:groupId12.id" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[0].gid"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon1SG.mwc" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[0].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId13.id" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[1].gid"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.mwc" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[1].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId14.id" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[2].gid"
+		;
+connectAttr "dressShaderSG.mwc" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[2].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1GroupId.id" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[5].gid"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1Set.mwc" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[5].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId16.id" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[6].gid"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:tweakSet1.mwc" "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[6].gco"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1.og[0]" "FoxGirl_Latest:YoungSamLatest_bodyShape.i"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:tweak1.vl[0].vt[0]" "FoxGirl_Latest:YoungSamLatest_bodyShape.twl"
+		;
+connectAttr "FoxGirl_Latest:polySphere1.out" "FoxGirl_Latest:pSphereShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Human_Latest:aiToon1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Human_Latest:aiToon2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Human_Latest:aiFlat1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Human_Latest:aiToon3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Human_Latest:aiFlat2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "dressShaderSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiFlat1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiFlat2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiToon1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiToon2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiFlat1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiToon3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiFlat2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Human_Latest:aiToon1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Human_Latest:aiToon2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Human_Latest:aiFlat1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Human_Latest:aiToon3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Human_Latest:aiFlat2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "dressShaderSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiFlat1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiFlat2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiToon1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiToon2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiFlat1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiToon3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "FoxGirl_Latest:Human_Latest:aiFlat2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr "ramp1.oc" "Human_Latest:shirtShader.base_tonemap";
-connectAttr "Human_Latest:rim_ramp.oc" "Human_Latest:shirtShader.rim_light_color"
+connectAttr "place2dTexture6.o" "ramp6.uv";
+connectAttr "place2dTexture6.ofs" "ramp6.fs";
+connectAttr "place2dTexture7.o" "ramp7.uv";
+connectAttr "place2dTexture7.ofs" "ramp7.fs";
+connectAttr "FoxGirl_Latest:ear_roughShape.wm" "polyExtrudeFace4.mp";
+connectAttr "FoxGirl_Latest:polyTweak1.out" "polyExtrudeFace4.ip";
+connectAttr "FoxGirl_Latest:polyCube1.out" "FoxGirl_Latest:polyTweak1.ip";
+connectAttr "FoxGirl_Latest:ear_roughShape.wm" "polyExtrudeFace5.mp";
+connectAttr "polyExtrudeFace4.out" "polyExtrudeFace5.ip";
+connectAttr "FoxGirl_Latest:ear_roughShape.iog.og[1]" "aiFlat1SG.dsm" -na;
+connectAttr "ear_roughShape.iog.og[1]" "aiFlat1SG.dsm" -na;
+connectAttr "lightPink.out" "aiFlat1SG.ss";
+connectAttr "groupId19.msg" "aiFlat1SG.gn" -na;
+connectAttr "groupId22.msg" "aiFlat1SG.gn" -na;
+connectAttr "aiFlat1SG.msg" "materialInfo8.sg";
+connectAttr "lightPink.msg" "materialInfo8.m";
+connectAttr "lightPink.msg" "materialInfo8.t" -na;
+connectAttr "polyExtrudeFace5.out" "groupParts7.ig";
+connectAttr "groupId17.id" "groupParts7.gi";
+connectAttr "groupParts7.og" "groupParts8.ig";
+connectAttr "groupId19.id" "groupParts8.gi";
+connectAttr "FoxGirl_Latest:ear_roughShape.wm" "polySplitRing4.mp";
+connectAttr "FoxGirl_Latest:polyTweak2.out" "polySplitRing4.ip";
+connectAttr "groupParts8.og" "FoxGirl_Latest:polyTweak2.ip";
+connectAttr "FoxGirl_Latest:ear_roughShape.iog.og[2]" "aiFlat2SG.dsm" -na;
+connectAttr "ear_roughShape.iog.og[2]" "aiFlat2SG.dsm" -na;
+connectAttr "aiFlat2.out" "aiFlat2SG.ss";
+connectAttr "groupId20.msg" "aiFlat2SG.gn" -na;
+connectAttr "groupId23.msg" "aiFlat2SG.gn" -na;
+connectAttr "aiFlat2SG.msg" "materialInfo9.sg";
+connectAttr "aiFlat2.msg" "materialInfo9.m";
+connectAttr "aiFlat2.msg" "materialInfo9.t" -na;
+connectAttr "polySplitRing4.out" "groupParts9.ig";
+connectAttr "groupId19.id" "groupParts9.gi";
+connectAttr "groupParts9.og" "groupParts10.ig";
+connectAttr "groupId20.id" "groupParts10.gi";
+connectAttr "FoxGirl_Latest:renderLayerManager.rlmi[0]" "FoxGirl_Latest:defaultRenderLayer.rlid"
 		;
-connectAttr "Human_Latest:shirtShader.out" "Human_Latest:aiToon1SG.ss";
-connectAttr "YoungSamLatest_bodyShape.iog.og[0]" "Human_Latest:aiToon1SG.dsm" -na
+connectAttr "FoxGirl_Latest:ramp1.oc" "FoxGirl_Latest:Human_Latest:shirtShader.base_tonemap"
 		;
-connectAttr "Human_Latest:groupId12.msg" "Human_Latest:aiToon1SG.gn" -na;
-connectAttr "Human_Latest:aiToon1SG.msg" "Human_Latest:materialInfo1.sg";
-connectAttr "Human_Latest:shirtShader.msg" "Human_Latest:materialInfo1.m";
-connectAttr "Human_Latest:shirtShader.msg" "Human_Latest:materialInfo1.t" -na;
-connectAttr "Human_Latest:place2dTexture1.o" "Human_Latest:toneMap_ramp.uv";
-connectAttr "Human_Latest:place2dTexture1.ofs" "Human_Latest:toneMap_ramp.fs";
-connectAttr "Human_Latest:toneMap_ramp.oc" "Human_Latest:skinShader.base_tonemap"
+connectAttr "FoxGirl_Latest:Human_Latest:rim_ramp.oc" "FoxGirl_Latest:Human_Latest:shirtShader.rim_light_color"
 		;
-connectAttr "Human_Latest:rim_ramp.oc" "Human_Latest:skinShader.rim_light_color"
+connectAttr "FoxGirl_Latest:Human_Latest:shirtShader.out" "FoxGirl_Latest:Human_Latest:aiToon1SG.ss"
 		;
-connectAttr "Human_Latest:skinShader.out" "Human_Latest:aiToon2SG.ss";
-connectAttr "Human_Latest:groupId4.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId5.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId6.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId7.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId8.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId9.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId10.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId11.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:groupId13.msg" "Human_Latest:aiToon2SG.gn" -na;
-connectAttr "Human_Latest:polySurfaceShape5.iog" "Human_Latest:aiToon2SG.dsm" -na
-		;
-connectAttr "Human_Latest:polySurfaceShape1.iog.og[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon1SG.dsm"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape1.ciog.cog[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId12.msg" "FoxGirl_Latest:Human_Latest:aiToon1SG.gn"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape7.iog.og[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon1SG.msg" "FoxGirl_Latest:Human_Latest:materialInfo1.sg"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:shirtShader.msg" "FoxGirl_Latest:Human_Latest:materialInfo1.m"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:shirtShader.msg" "FoxGirl_Latest:Human_Latest:materialInfo1.t"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape8.iog.og[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "ramp7.oc" "FoxGirl_Latest:Human_Latest:skinShader.base_tonemap";
+connectAttr "FoxGirl_Latest:Human_Latest:rim_ramp.oc" "FoxGirl_Latest:Human_Latest:skinShader.rim_light_color"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinShader.out" "FoxGirl_Latest:Human_Latest:aiToon2SG.ss"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId4.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape3.iog.og[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId5.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape3.ciog.cog[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId6.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape10.iog.og[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId7.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "Human_Latest:polySurfaceShape11.iog.og[0]" "Human_Latest:aiToon2SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId8.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "YoungSamLatest_bodyShape.iog.og[1]" "Human_Latest:aiToon2SG.dsm" -na
-		;
-connectAttr "Human_Latest:aiToon2SG.msg" "Human_Latest:materialInfo2.sg";
-connectAttr "Human_Latest:skinShader.msg" "Human_Latest:materialInfo2.m";
-connectAttr "Human_Latest:skinShader.msg" "Human_Latest:materialInfo2.t" -na;
-connectAttr "Human_Latest:blackFlat.out" "Human_Latest:aiFlat1SG.ss";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube3|Human_Latest:pCubeShape3.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId9.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube4|Human_Latest:pCubeShape4.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId10.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube5|Human_Latest:pCubeShape5.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId11.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube6|Human_Latest:pCubeShape6.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:groupId13.msg" "FoxGirl_Latest:Human_Latest:aiToon2SG.gn"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube7|Human_Latest:pCubeShape7.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape5.iog" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube8|Human_Latest:pCubeShape8.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape1.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube9|Human_Latest:pCubeShape9.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape1.ciog.cog[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube10|Human_Latest:pCubeShape10.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape7.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube11|Human_Latest:pCubeShape11.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape8.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube12|Human_Latest:pCubeShape12.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape3.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:hairGuides|Human_Latest:pCube13|Human_Latest:pCubeShape13.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape3.ciog.cog[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube3|Human_Latest:pCubeShape3.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape10.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube4|Human_Latest:pCubeShape4.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape11.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube5|Human_Latest:pCubeShape5.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[1]" "FoxGirl_Latest:Human_Latest:aiToon2SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube6|Human_Latest:pCubeShape6.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.msg" "FoxGirl_Latest:Human_Latest:materialInfo2.sg"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinShader.msg" "FoxGirl_Latest:Human_Latest:materialInfo2.m"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinShader.msg" "FoxGirl_Latest:Human_Latest:materialInfo2.t"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube7|Human_Latest:pCubeShape7.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "FoxGirl_Latest:Human_Latest:blackFlat.out" "FoxGirl_Latest:Human_Latest:aiFlat1SG.ss"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube3|FoxGirl_Latest:Human_Latest:pCubeShape3.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube8|Human_Latest:pCubeShape8.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube4|FoxGirl_Latest:Human_Latest:pCubeShape4.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube9|Human_Latest:pCubeShape9.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube5|FoxGirl_Latest:Human_Latest:pCubeShape5.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube10|Human_Latest:pCubeShape10.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube6|FoxGirl_Latest:Human_Latest:pCubeShape6.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube11|Human_Latest:pCubeShape11.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube7|FoxGirl_Latest:Human_Latest:pCubeShape7.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube12|Human_Latest:pCubeShape12.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube8|FoxGirl_Latest:Human_Latest:pCubeShape8.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow2|Human_Latest:pCube13|Human_Latest:pCubeShape13.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube9|FoxGirl_Latest:Human_Latest:pCubeShape9.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube3|Human_Latest:pCubeShape3.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube10|FoxGirl_Latest:Human_Latest:pCubeShape10.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube4|Human_Latest:pCubeShape4.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube11|FoxGirl_Latest:Human_Latest:pCubeShape11.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube5|Human_Latest:pCubeShape5.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube12|FoxGirl_Latest:Human_Latest:pCubeShape12.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube6|Human_Latest:pCubeShape6.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:hairGuides|FoxGirl_Latest:Human_Latest:pCube13|FoxGirl_Latest:Human_Latest:pCubeShape13.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube7|Human_Latest:pCubeShape7.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube3|FoxGirl_Latest:Human_Latest:pCubeShape3.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube8|Human_Latest:pCubeShape8.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube4|FoxGirl_Latest:Human_Latest:pCubeShape4.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube9|Human_Latest:pCubeShape9.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube5|FoxGirl_Latest:Human_Latest:pCubeShape5.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube10|Human_Latest:pCubeShape10.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube6|FoxGirl_Latest:Human_Latest:pCubeShape6.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube11|Human_Latest:pCubeShape11.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube7|FoxGirl_Latest:Human_Latest:pCubeShape7.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube12|Human_Latest:pCubeShape12.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube8|FoxGirl_Latest:Human_Latest:pCubeShape8.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:head|Human_Latest:eyeGuidesRow1|Human_Latest:pCube13|Human_Latest:pCubeShape13.iog" "Human_Latest:aiFlat1SG.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube9|FoxGirl_Latest:Human_Latest:pCubeShape9.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "Human_Latest:LineShape.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "pCubeShape6.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "pCubeShape10.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "halfhalflineShape.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "halflineShape.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "LineShape.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "Line1Shape.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "Line2Shape.iog" "Human_Latest:aiFlat1SG.dsm" -na;
-connectAttr "Human_Latest:aiFlat1SG.msg" "Human_Latest:materialInfo3.sg";
-connectAttr "Human_Latest:blackFlat.msg" "Human_Latest:materialInfo3.m";
-connectAttr "Human_Latest:blackFlat.msg" "Human_Latest:materialInfo3.t" -na;
-connectAttr "Human_Latest:place2dTexture2.o" "Human_Latest:rim_ramp.uv";
-connectAttr "Human_Latest:place2dTexture2.ofs" "Human_Latest:rim_ramp.fs";
-connectAttr "Human_Latest:rim_ramp.oc" "Human_Latest:dressShader.rim_light_color"
-		;
-connectAttr "Human_Latest:toneMap_ramp.oc" "Human_Latest:dressShader.base_tonemap"
-		;
-connectAttr "Human_Latest:dressShader.out" "Human_Latest:aiToon3SG.ss";
-connectAttr "Human_Latest:groupId14.msg" "Human_Latest:aiToon3SG.gn" -na;
-connectAttr "YoungSamLatest_bodyShape.iog.og[2]" "Human_Latest:aiToon3SG.dsm" -na
-		;
-connectAttr "Human_Latest:polySurfaceShape4.iog" "Human_Latest:aiToon3SG.dsm" -na
-		;
-connectAttr "ear_roughShape.iog" "Human_Latest:aiToon3SG.dsm" -na;
-connectAttr "ear_rough1Shape.iog" "Human_Latest:aiToon3SG.dsm" -na;
-connectAttr "Human_Latest:aiToon3SG.msg" "Human_Latest:materialInfo4.sg";
-connectAttr "Human_Latest:dressShader.msg" "Human_Latest:materialInfo4.m";
-connectAttr "Human_Latest:dressShader.msg" "Human_Latest:materialInfo4.t" -na;
-connectAttr "Human_Latest:greyFlat.out" "Human_Latest:aiFlat2SG.ss";
-connectAttr "Human_Latest:pPlaneShape1.iog" "Human_Latest:aiFlat2SG.dsm" -na;
-connectAttr "Human_Latest:aiFlat2SG.msg" "Human_Latest:materialInfo5.sg";
-connectAttr "Human_Latest:greyFlat.msg" "Human_Latest:materialInfo5.m";
-connectAttr "Human_Latest:greyFlat.msg" "Human_Latest:materialInfo5.t" -na;
-connectAttr "Human_Latest:aiToon3SG.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Human_Latest:place2dTexture2.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "Human_Latest:skinShader.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "Human_Latest:toneMap_ramp.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "Human_Latest:aiToon2SG.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "Human_Latest:aiFlat2SG.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "Human_Latest:dressShader.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "Human_Latest:aiToon1SG.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
-		;
-connectAttr "Human_Latest:place2dTexture1.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
-		;
-connectAttr "Human_Latest:rim_ramp.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
-connectAttr "Human_Latest:shirtShader.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "Human_Latest:greyFlat.msg" "Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "Human_Latest:polySurfaceShape6.o" "Human_Latest:polyChipOff1.ip";
-connectAttr "Human_Latest:polySurfaceShape1.wm" "Human_Latest:polyChipOff1.mp";
-connectAttr "Human_Latest:polySurfaceShape1.o" "Human_Latest:polySeparate1.ip";
-connectAttr "Human_Latest:polyChipOff1.out" "Human_Latest:groupParts1.ig";
-connectAttr "Human_Latest:groupId4.id" "Human_Latest:groupParts1.gi";
-connectAttr "Human_Latest:polySeparate1.out[0]" "Human_Latest:groupParts2.ig";
-connectAttr "Human_Latest:groupId6.id" "Human_Latest:groupParts2.gi";
-connectAttr "Human_Latest:polySeparate1.out[1]" "Human_Latest:groupParts3.ig";
-connectAttr "Human_Latest:groupId7.id" "Human_Latest:groupParts3.gi";
-connectAttr "Human_Latest:polySurfaceShape9.o" "Human_Latest:polyChipOff2.ip";
-connectAttr "Human_Latest:polySurfaceShape3.wm" "Human_Latest:polyChipOff2.mp";
-connectAttr "Human_Latest:polySurfaceShape3.o" "Human_Latest:polySeparate2.ip";
-connectAttr "Human_Latest:polyChipOff2.out" "Human_Latest:groupParts4.ig";
-connectAttr "Human_Latest:groupId8.id" "Human_Latest:groupParts4.gi";
-connectAttr "Human_Latest:polySeparate2.out[0]" "Human_Latest:groupParts5.ig";
-connectAttr "Human_Latest:groupId10.id" "Human_Latest:groupParts5.gi";
-connectAttr "Human_Latest:polySeparate2.out[1]" "Human_Latest:groupParts6.ig";
-connectAttr "Human_Latest:groupId11.id" "Human_Latest:groupParts6.gi";
-connectAttr "Human_Latest:skinCluster1GroupParts.og" "Human_Latest:skinCluster1.ip[0].ig"
-		;
-connectAttr "Human_Latest:skinCluster1GroupId.id" "Human_Latest:skinCluster1.ip[0].gi"
-		;
-connectAttr "Human_Latest:bindPose1.msg" "Human_Latest:skinCluster1.bp";
-connectAttr "Human_Latest:torso.wm" "Human_Latest:skinCluster1.ma[0]";
-connectAttr "Human_Latest:thigh_right.wm" "Human_Latest:skinCluster1.ma[1]";
-connectAttr "Human_Latest:knee_right.wm" "Human_Latest:skinCluster1.ma[2]";
-connectAttr "Human_Latest:foot_right.wm" "Human_Latest:skinCluster1.ma[3]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.wm" "Human_Latest:skinCluster1.ma[4]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.wm" "Human_Latest:skinCluster1.ma[5]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.wm" "Human_Latest:skinCluster1.ma[6]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.wm" "Human_Latest:skinCluster1.ma[8]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.wm" "Human_Latest:skinCluster1.ma[9]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.wm" "Human_Latest:skinCluster1.ma[10]"
-		;
-connectAttr "Human_Latest:right_hand.wm" "Human_Latest:skinCluster1.ma[11]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.wm" "Human_Latest:skinCluster1.ma[12]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.wm" "Human_Latest:skinCluster1.ma[13]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.wm" "Human_Latest:skinCluster1.ma[14]"
-		;
-connectAttr "Human_Latest:left_hand.wm" "Human_Latest:skinCluster1.ma[15]";
-connectAttr "Human_Latest:thigh_left.wm" "Human_Latest:skinCluster1.ma[16]";
-connectAttr "Human_Latest:knee_left.wm" "Human_Latest:skinCluster1.ma[17]";
-connectAttr "Human_Latest:foot_left.wm" "Human_Latest:skinCluster1.ma[18]";
-connectAttr "Human_Latest:torso.liw" "Human_Latest:skinCluster1.lw[0]";
-connectAttr "Human_Latest:thigh_right.liw" "Human_Latest:skinCluster1.lw[1]";
-connectAttr "Human_Latest:knee_right.liw" "Human_Latest:skinCluster1.lw[2]";
-connectAttr "Human_Latest:foot_right.liw" "Human_Latest:skinCluster1.lw[3]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.liw" "Human_Latest:skinCluster1.lw[4]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.liw" "Human_Latest:skinCluster1.lw[5]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.liw" "Human_Latest:skinCluster1.lw[6]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.liw" "Human_Latest:skinCluster1.lw[8]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.liw" "Human_Latest:skinCluster1.lw[9]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.liw" "Human_Latest:skinCluster1.lw[10]"
-		;
-connectAttr "Human_Latest:right_hand.liw" "Human_Latest:skinCluster1.lw[11]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.liw" "Human_Latest:skinCluster1.lw[12]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.liw" "Human_Latest:skinCluster1.lw[13]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.liw" "Human_Latest:skinCluster1.lw[14]"
-		;
-connectAttr "Human_Latest:left_hand.liw" "Human_Latest:skinCluster1.lw[15]";
-connectAttr "Human_Latest:thigh_left.liw" "Human_Latest:skinCluster1.lw[16]";
-connectAttr "Human_Latest:knee_left.liw" "Human_Latest:skinCluster1.lw[17]";
-connectAttr "Human_Latest:foot_left.liw" "Human_Latest:skinCluster1.lw[18]";
-connectAttr "Human_Latest:torso.obcc" "Human_Latest:skinCluster1.ifcl[0]";
-connectAttr "Human_Latest:thigh_right.obcc" "Human_Latest:skinCluster1.ifcl[1]";
-connectAttr "Human_Latest:knee_right.obcc" "Human_Latest:skinCluster1.ifcl[2]";
-connectAttr "Human_Latest:foot_right.obcc" "Human_Latest:skinCluster1.ifcl[3]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.obcc" "Human_Latest:skinCluster1.ifcl[4]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.obcc" "Human_Latest:skinCluster1.ifcl[5]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.obcc" "Human_Latest:skinCluster1.ifcl[6]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.obcc" "Human_Latest:skinCluster1.ifcl[8]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.obcc" "Human_Latest:skinCluster1.ifcl[9]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.obcc" "Human_Latest:skinCluster1.ifcl[10]"
-		;
-connectAttr "Human_Latest:right_hand.obcc" "Human_Latest:skinCluster1.ifcl[11]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.obcc" "Human_Latest:skinCluster1.ifcl[12]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.obcc" "Human_Latest:skinCluster1.ifcl[13]"
-		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.obcc" "Human_Latest:skinCluster1.ifcl[14]"
-		;
-connectAttr "Human_Latest:left_hand.obcc" "Human_Latest:skinCluster1.ifcl[15]";
-connectAttr "Human_Latest:thigh_left.obcc" "Human_Latest:skinCluster1.ifcl[16]";
-connectAttr "Human_Latest:knee_left.obcc" "Human_Latest:skinCluster1.ifcl[17]";
-connectAttr "Human_Latest:foot_left.obcc" "Human_Latest:skinCluster1.ifcl[18]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.msg" "Human_Latest:skinCluster1.ptt"
-		;
-connectAttr "YoungSamLatest_bodyShape1Orig.w" "Human_Latest:groupParts7.ig";
-connectAttr "Human_Latest:groupId12.id" "Human_Latest:groupParts7.gi";
-connectAttr "Human_Latest:groupParts7.og" "Human_Latest:groupParts8.ig";
-connectAttr "Human_Latest:groupId13.id" "Human_Latest:groupParts8.gi";
-connectAttr "Human_Latest:groupParts8.og" "Human_Latest:groupParts9.ig";
-connectAttr "Human_Latest:groupId14.id" "Human_Latest:groupParts9.gi";
-connectAttr "Human_Latest:groupParts11.og" "Human_Latest:tweak1.ip[0].ig";
-connectAttr "Human_Latest:groupId16.id" "Human_Latest:tweak1.ip[0].gi";
-connectAttr "Human_Latest:skinCluster1GroupId.msg" "Human_Latest:skinCluster1Set.gn"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube10|FoxGirl_Latest:Human_Latest:pCubeShape10.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "YoungSamLatest_bodyShape.iog.og[5]" "Human_Latest:skinCluster1Set.dsm"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube11|FoxGirl_Latest:Human_Latest:pCubeShape11.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
 		 -na;
-connectAttr "Human_Latest:skinCluster1.msg" "Human_Latest:skinCluster1Set.ub[0]"
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube12|FoxGirl_Latest:Human_Latest:pCubeShape12.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow2|FoxGirl_Latest:Human_Latest:pCube13|FoxGirl_Latest:Human_Latest:pCubeShape13.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube3|FoxGirl_Latest:Human_Latest:pCubeShape3.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube4|FoxGirl_Latest:Human_Latest:pCubeShape4.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube5|FoxGirl_Latest:Human_Latest:pCubeShape5.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube6|FoxGirl_Latest:Human_Latest:pCubeShape6.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube7|FoxGirl_Latest:Human_Latest:pCubeShape7.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube8|FoxGirl_Latest:Human_Latest:pCubeShape8.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube9|FoxGirl_Latest:Human_Latest:pCubeShape9.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube10|FoxGirl_Latest:Human_Latest:pCubeShape10.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube11|FoxGirl_Latest:Human_Latest:pCubeShape11.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube12|FoxGirl_Latest:Human_Latest:pCubeShape12.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:head|FoxGirl_Latest:Human_Latest:eyeGuidesRow1|FoxGirl_Latest:Human_Latest:pCube13|FoxGirl_Latest:Human_Latest:pCubeShape13.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:LineShape.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:pCubeShape6.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:pCubeShape10.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:halfhalflineShape.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:halflineShape.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:LineShape.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Line1Shape.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Line2Shape.iog" "FoxGirl_Latest:Human_Latest:aiFlat1SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:aiFlat1SG.msg" "FoxGirl_Latest:Human_Latest:materialInfo3.sg"
 		;
-connectAttr "Human_Latest:tweak1.og[0]" "Human_Latest:skinCluster1GroupParts.ig"
+connectAttr "FoxGirl_Latest:Human_Latest:blackFlat.msg" "FoxGirl_Latest:Human_Latest:materialInfo3.m"
 		;
-connectAttr "Human_Latest:skinCluster1GroupId.id" "Human_Latest:skinCluster1GroupParts.gi"
+connectAttr "FoxGirl_Latest:Human_Latest:blackFlat.msg" "FoxGirl_Latest:Human_Latest:materialInfo3.t"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:place2dTexture2.o" "FoxGirl_Latest:Human_Latest:rim_ramp.uv"
 		;
-connectAttr "Human_Latest:groupId16.msg" "Human_Latest:tweakSet1.gn" -na;
-connectAttr "YoungSamLatest_bodyShape.iog.og[6]" "Human_Latest:tweakSet1.dsm" -na
+connectAttr "FoxGirl_Latest:Human_Latest:place2dTexture2.ofs" "FoxGirl_Latest:Human_Latest:rim_ramp.fs"
 		;
-connectAttr "Human_Latest:tweak1.msg" "Human_Latest:tweakSet1.ub[0]";
-connectAttr "Human_Latest:groupParts9.og" "Human_Latest:groupParts11.ig";
-connectAttr "Human_Latest:groupId16.id" "Human_Latest:groupParts11.gi";
-connectAttr "Human_Latest:master_control.msg" "Human_Latest:bindPose1.m[0]";
-connectAttr "Human_Latest:torso.msg" "Human_Latest:bindPose1.m[1]";
-connectAttr "Human_Latest:thigh_right.msg" "Human_Latest:bindPose1.m[2]";
-connectAttr "Human_Latest:knee_right.msg" "Human_Latest:bindPose1.m[3]";
-connectAttr "Human_Latest:foot_right.msg" "Human_Latest:bindPose1.m[4]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.msg" "Human_Latest:bindPose1.m[5]"
+connectAttr "FoxGirl_Latest:Human_Latest:rim_ramp.oc" "orangeShader.rim_light_color"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.msg" "Human_Latest:bindPose1.m[6]"
+connectAttr "ramp6.oc" "orangeShader.base_tonemap";
+connectAttr "orangeShader.out" "FoxGirl_Latest:Human_Latest:aiToon3SG.ss";
+connectAttr "groupId17.msg" "FoxGirl_Latest:Human_Latest:aiToon3SG.gn" -na;
+connectAttr "groupId18.msg" "FoxGirl_Latest:Human_Latest:aiToon3SG.gn" -na;
+connectAttr "groupId21.msg" "FoxGirl_Latest:Human_Latest:aiToon3SG.gn" -na;
+connectAttr "groupId24.msg" "FoxGirl_Latest:Human_Latest:aiToon3SG.gn" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape4.iog" "FoxGirl_Latest:Human_Latest:aiToon3SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:ear_rough1Shape.iog" "FoxGirl_Latest:Human_Latest:aiToon3SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:ear_roughShape.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon3SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:ear_roughShape.ciog.cog[0]" "FoxGirl_Latest:Human_Latest:aiToon3SG.dsm"
+		 -na;
+connectAttr "ear_roughShape.iog.og[0]" "FoxGirl_Latest:Human_Latest:aiToon3SG.dsm"
+		 -na;
+connectAttr "ear_roughShape.ciog.cog[0]" "FoxGirl_Latest:Human_Latest:aiToon3SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon3SG.msg" "FoxGirl_Latest:Human_Latest:materialInfo4.sg"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.msg" "Human_Latest:bindPose1.m[7]"
+connectAttr "orangeShader.msg" "FoxGirl_Latest:Human_Latest:materialInfo4.m";
+connectAttr "orangeShader.msg" "FoxGirl_Latest:Human_Latest:materialInfo4.t" -na
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.msg" "Human_Latest:bindPose1.m[9]"
+connectAttr "FoxGirl_Latest:Human_Latest:greyFlat.out" "FoxGirl_Latest:Human_Latest:aiFlat2SG.ss"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.msg" "Human_Latest:bindPose1.m[10]"
+connectAttr "FoxGirl_Latest:Human_Latest:pPlaneShape1.iog" "FoxGirl_Latest:Human_Latest:aiFlat2SG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:aiFlat2SG.msg" "FoxGirl_Latest:Human_Latest:materialInfo5.sg"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.msg" "Human_Latest:bindPose1.m[11]"
+connectAttr "FoxGirl_Latest:Human_Latest:greyFlat.msg" "FoxGirl_Latest:Human_Latest:materialInfo5.m"
 		;
-connectAttr "Human_Latest:right_hand.msg" "Human_Latest:bindPose1.m[12]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.msg" "Human_Latest:bindPose1.m[13]"
+connectAttr "FoxGirl_Latest:Human_Latest:greyFlat.msg" "FoxGirl_Latest:Human_Latest:materialInfo5.t"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon3SG.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.msg" "Human_Latest:bindPose1.m[14]"
+connectAttr "FoxGirl_Latest:Human_Latest:place2dTexture2.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.msg" "Human_Latest:bindPose1.m[15]"
+connectAttr "FoxGirl_Latest:Human_Latest:skinShader.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "Human_Latest:left_hand.msg" "Human_Latest:bindPose1.m[16]";
-connectAttr "Human_Latest:thigh_left.msg" "Human_Latest:bindPose1.m[17]";
-connectAttr "Human_Latest:knee_left.msg" "Human_Latest:bindPose1.m[18]";
-connectAttr "Human_Latest:foot_left.msg" "Human_Latest:bindPose1.m[19]";
-connectAttr "Human_Latest:bindPose1.w" "Human_Latest:bindPose1.p[0]";
-connectAttr "Human_Latest:bindPose1.m[0]" "Human_Latest:bindPose1.p[1]";
-connectAttr "Human_Latest:bindPose1.m[1]" "Human_Latest:bindPose1.p[2]";
-connectAttr "Human_Latest:bindPose1.m[2]" "Human_Latest:bindPose1.p[3]";
-connectAttr "Human_Latest:bindPose1.m[3]" "Human_Latest:bindPose1.p[4]";
-connectAttr "Human_Latest:bindPose1.m[1]" "Human_Latest:bindPose1.p[5]";
-connectAttr "Human_Latest:bindPose1.m[5]" "Human_Latest:bindPose1.p[6]";
-connectAttr "Human_Latest:bindPose1.m[6]" "Human_Latest:bindPose1.p[7]";
-connectAttr "Human_Latest:bindPose1.m[6]" "Human_Latest:bindPose1.p[9]";
-connectAttr "Human_Latest:bindPose1.m[9]" "Human_Latest:bindPose1.p[10]";
-connectAttr "Human_Latest:bindPose1.m[10]" "Human_Latest:bindPose1.p[11]";
-connectAttr "Human_Latest:bindPose1.m[11]" "Human_Latest:bindPose1.p[12]";
-connectAttr "Human_Latest:bindPose1.m[6]" "Human_Latest:bindPose1.p[13]";
-connectAttr "Human_Latest:bindPose1.m[13]" "Human_Latest:bindPose1.p[14]";
-connectAttr "Human_Latest:bindPose1.m[14]" "Human_Latest:bindPose1.p[15]";
-connectAttr "Human_Latest:bindPose1.m[15]" "Human_Latest:bindPose1.p[16]";
-connectAttr "Human_Latest:bindPose1.m[1]" "Human_Latest:bindPose1.p[17]";
-connectAttr "Human_Latest:bindPose1.m[17]" "Human_Latest:bindPose1.p[18]";
-connectAttr "Human_Latest:bindPose1.m[18]" "Human_Latest:bindPose1.p[19]";
-connectAttr "Human_Latest:torso.bps" "Human_Latest:bindPose1.wm[1]";
-connectAttr "Human_Latest:thigh_right.bps" "Human_Latest:bindPose1.wm[2]";
-connectAttr "Human_Latest:knee_right.bps" "Human_Latest:bindPose1.wm[3]";
-connectAttr "Human_Latest:foot_right.bps" "Human_Latest:bindPose1.wm[4]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back.bps" "Human_Latest:bindPose1.wm[5]"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest.bps" "Human_Latest:bindPose1.wm[6]"
+connectAttr "FoxGirl_Latest:Human_Latest:aiFlat2SG.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:neck.bps" "Human_Latest:bindPose1.wm[7]"
+connectAttr "orangeShader.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder.bps" "Human_Latest:bindPose1.wm[9]"
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon1SG.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow.bps" "Human_Latest:bindPose1.wm[10]"
+connectAttr "FoxGirl_Latest:Human_Latest:rim_ramp.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:right_shoulder|Human_Latest:right_elbow|Human_Latest:right_wrist.bps" "Human_Latest:bindPose1.wm[11]"
+connectAttr "FoxGirl_Latest:Human_Latest:shirtShader.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "Human_Latest:right_hand.bps" "Human_Latest:bindPose1.wm[12]";
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder.bps" "Human_Latest:bindPose1.wm[13]"
+connectAttr "FoxGirl_Latest:Human_Latest:greyFlat.msg" "FoxGirl_Latest:Human_Latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow.bps" "Human_Latest:bindPose1.wm[14]"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape6.o" "FoxGirl_Latest:Human_Latest:polyChipOff1.ip"
 		;
-connectAttr "|YoungSamLatest_YoungSam|Human_Latest:master_control|Human_Latest:torso|Human_Latest:back|Human_Latest:chest|Human_Latest:left_shoulder|Human_Latest:left_elbow|Human_Latest:left_wrist.bps" "Human_Latest:bindPose1.wm[15]"
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape1.wm" "FoxGirl_Latest:Human_Latest:polyChipOff1.mp"
 		;
-connectAttr "Human_Latest:left_hand.bps" "Human_Latest:bindPose1.wm[16]";
-connectAttr "Human_Latest:thigh_left.bps" "Human_Latest:bindPose1.wm[17]";
-connectAttr "Human_Latest:knee_left.bps" "Human_Latest:bindPose1.wm[18]";
-connectAttr "Human_Latest:foot_left.bps" "Human_Latest:bindPose1.wm[19]";
-connectAttr "place2dTexture1.o" "ramp1.uv";
-connectAttr "place2dTexture1.ofs" "ramp1.fs";
-connectAttr "Human_Latest:aiToon1SG.pa" ":renderPartition.st" -na;
-connectAttr "Human_Latest:aiToon2SG.pa" ":renderPartition.st" -na;
-connectAttr "Human_Latest:aiFlat1SG.pa" ":renderPartition.st" -na;
-connectAttr "Human_Latest:aiToon3SG.pa" ":renderPartition.st" -na;
-connectAttr "Human_Latest:aiFlat2SG.pa" ":renderPartition.st" -na;
-connectAttr "Human_Latest:shirtShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "Human_Latest:skinShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "Human_Latest:blackFlat.msg" ":defaultShaderList1.s" -na;
-connectAttr "Human_Latest:dressShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "Human_Latest:greyFlat.msg" ":defaultShaderList1.s" -na;
-connectAttr "Human_Latest:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape1.o" "FoxGirl_Latest:Human_Latest:polySeparate1.ip"
 		;
-connectAttr "Human_Latest:place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na
+connectAttr "FoxGirl_Latest:Human_Latest:polyChipOff1.out" "FoxGirl_Latest:Human_Latest:groupParts1.ig"
 		;
-connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId4.id" "FoxGirl_Latest:Human_Latest:groupParts1.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySeparate1.out[0]" "FoxGirl_Latest:Human_Latest:groupParts2.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId6.id" "FoxGirl_Latest:Human_Latest:groupParts2.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySeparate1.out[1]" "FoxGirl_Latest:Human_Latest:groupParts3.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId7.id" "FoxGirl_Latest:Human_Latest:groupParts3.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape9.o" "FoxGirl_Latest:Human_Latest:polyChipOff2.ip"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape3.wm" "FoxGirl_Latest:Human_Latest:polyChipOff2.mp"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySurfaceShape3.o" "FoxGirl_Latest:Human_Latest:polySeparate2.ip"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polyChipOff2.out" "FoxGirl_Latest:Human_Latest:groupParts4.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId8.id" "FoxGirl_Latest:Human_Latest:groupParts4.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySeparate2.out[0]" "FoxGirl_Latest:Human_Latest:groupParts5.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId10.id" "FoxGirl_Latest:Human_Latest:groupParts5.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:polySeparate2.out[1]" "FoxGirl_Latest:Human_Latest:groupParts6.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId11.id" "FoxGirl_Latest:Human_Latest:groupParts6.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1GroupParts.og" "FoxGirl_Latest:Human_Latest:skinCluster1.ip[0].ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1GroupId.id" "FoxGirl_Latest:Human_Latest:skinCluster1.ip[0].gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.msg" "FoxGirl_Latest:Human_Latest:skinCluster1.bp"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:torso.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[1]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_right.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[2]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[3]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[4]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[5]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[6]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[8]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[9]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[10]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:right_hand.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[11]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[12]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[13]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[14]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:left_hand.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[15]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[16]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_left.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[17]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.wm" "FoxGirl_Latest:Human_Latest:skinCluster1.ma[18]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:torso.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[1]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_right.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[2]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[3]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[4]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[5]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[6]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[8]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[9]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[10]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:right_hand.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[11]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[12]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[13]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[14]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:left_hand.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[15]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[16]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_left.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[17]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.liw" "FoxGirl_Latest:Human_Latest:skinCluster1.lw[18]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:torso.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[1]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_right.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[2]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[3]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[4]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[5]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[6]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[8]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[9]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[10]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:right_hand.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[11]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[12]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[13]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[14]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:left_hand.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[15]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[16]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_left.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[17]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.obcc" "FoxGirl_Latest:Human_Latest:skinCluster1.ifcl[18]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.msg" "FoxGirl_Latest:Human_Latest:skinCluster1.ptt"
+		;
+connectAttr "FoxGirl_Latest:YoungSamLatest_bodyShape1Orig.w" "FoxGirl_Latest:Human_Latest:groupParts7.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId12.id" "FoxGirl_Latest:Human_Latest:groupParts7.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts7.og" "FoxGirl_Latest:Human_Latest:groupParts8.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId13.id" "FoxGirl_Latest:Human_Latest:groupParts8.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts8.og" "FoxGirl_Latest:Human_Latest:groupParts9.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId14.id" "FoxGirl_Latest:Human_Latest:groupParts9.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts11.og" "FoxGirl_Latest:Human_Latest:tweak1.ip[0].ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId16.id" "FoxGirl_Latest:Human_Latest:tweak1.ip[0].gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1GroupId.msg" "FoxGirl_Latest:Human_Latest:skinCluster1Set.gn"
+		 -na;
+connectAttr "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[5]" "FoxGirl_Latest:Human_Latest:skinCluster1Set.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1.msg" "FoxGirl_Latest:Human_Latest:skinCluster1Set.ub[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:tweak1.og[0]" "FoxGirl_Latest:Human_Latest:skinCluster1GroupParts.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:skinCluster1GroupId.id" "FoxGirl_Latest:Human_Latest:skinCluster1GroupParts.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId16.msg" "FoxGirl_Latest:Human_Latest:tweakSet1.gn"
+		 -na;
+connectAttr "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[6]" "FoxGirl_Latest:Human_Latest:tweakSet1.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:tweak1.msg" "FoxGirl_Latest:Human_Latest:tweakSet1.ub[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupParts9.og" "FoxGirl_Latest:Human_Latest:groupParts11.ig"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId16.id" "FoxGirl_Latest:Human_Latest:groupParts11.gi"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:master_control.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:torso.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[1]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[2]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_right.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[3]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[4]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[5]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[6]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[7]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[9]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[10]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[11]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:right_hand.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[12]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[13]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[14]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[15]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:left_hand.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[16]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[17]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_left.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[18]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.msg" "FoxGirl_Latest:Human_Latest:bindPose1.m[19]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.w" "FoxGirl_Latest:Human_Latest:bindPose1.p[0]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[0]" "FoxGirl_Latest:Human_Latest:bindPose1.p[1]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[1]" "FoxGirl_Latest:Human_Latest:bindPose1.p[2]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[2]" "FoxGirl_Latest:Human_Latest:bindPose1.p[3]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[3]" "FoxGirl_Latest:Human_Latest:bindPose1.p[4]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[1]" "FoxGirl_Latest:Human_Latest:bindPose1.p[5]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[5]" "FoxGirl_Latest:Human_Latest:bindPose1.p[6]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[6]" "FoxGirl_Latest:Human_Latest:bindPose1.p[7]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[6]" "FoxGirl_Latest:Human_Latest:bindPose1.p[9]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[9]" "FoxGirl_Latest:Human_Latest:bindPose1.p[10]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[10]" "FoxGirl_Latest:Human_Latest:bindPose1.p[11]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[11]" "FoxGirl_Latest:Human_Latest:bindPose1.p[12]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[6]" "FoxGirl_Latest:Human_Latest:bindPose1.p[13]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[13]" "FoxGirl_Latest:Human_Latest:bindPose1.p[14]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[14]" "FoxGirl_Latest:Human_Latest:bindPose1.p[15]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[15]" "FoxGirl_Latest:Human_Latest:bindPose1.p[16]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[1]" "FoxGirl_Latest:Human_Latest:bindPose1.p[17]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[17]" "FoxGirl_Latest:Human_Latest:bindPose1.p[18]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:bindPose1.m[18]" "FoxGirl_Latest:Human_Latest:bindPose1.p[19]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:torso.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[1]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_right.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[2]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_right.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[3]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_right.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[4]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[5]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[6]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:neck.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[7]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[9]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[10]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:right_shoulder|FoxGirl_Latest:Human_Latest:right_elbow|FoxGirl_Latest:Human_Latest:right_wrist.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[11]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:right_hand.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[12]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[13]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[14]"
+		;
+connectAttr "|FoxGirl_Latest:YoungSamLatest_YoungSam|FoxGirl_Latest:Human_Latest:master_control|FoxGirl_Latest:Human_Latest:torso|FoxGirl_Latest:Human_Latest:back|FoxGirl_Latest:Human_Latest:chest|FoxGirl_Latest:Human_Latest:left_shoulder|FoxGirl_Latest:Human_Latest:left_elbow|FoxGirl_Latest:Human_Latest:left_wrist.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[15]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:left_hand.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[16]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:thigh_left.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[17]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:knee_left.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[18]"
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:foot_left.bps" "FoxGirl_Latest:Human_Latest:bindPose1.wm[19]"
+		;
+connectAttr "FoxGirl_Latest:place2dTexture1.o" "FoxGirl_Latest:ramp1.uv";
+connectAttr "FoxGirl_Latest:place2dTexture1.ofs" "FoxGirl_Latest:ramp1.fs";
+connectAttr "rim_ramp.oc" "dressShader.rim_light_color";
+connectAttr "ramp8.oc" "dressShader.base_tonemap";
+connectAttr "place2dTexture2.o" "rim_ramp.uv";
+connectAttr "place2dTexture2.ofs" "rim_ramp.fs";
+connectAttr "place2dTexture8.o" "ramp8.uv";
+connectAttr "place2dTexture8.ofs" "ramp8.fs";
+connectAttr "dressShader.out" "dressShaderSG.ss";
+connectAttr "FoxGirl_Latest:YoungSamLatest_bodyShape.iog.og[2]" "dressShaderSG.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:groupId14.msg" "dressShaderSG.gn" -na;
+connectAttr "dressShaderSG.msg" "materialInfo10.sg";
+connectAttr "dressShader.msg" "materialInfo10.m";
+connectAttr "dressShader.msg" "materialInfo10.t" -na;
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "ramp8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "place2dTexture8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "rim_ramp.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "dressShader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "dressShaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "aiFlat1SG.pa" ":renderPartition.st" -na;
+connectAttr "aiFlat2SG.pa" ":renderPartition.st" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon1SG.pa" ":renderPartition.st" -na
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon2SG.pa" ":renderPartition.st" -na
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiFlat1SG.pa" ":renderPartition.st" -na
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiToon3SG.pa" ":renderPartition.st" -na
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:aiFlat2SG.pa" ":renderPartition.st" -na
+		;
+connectAttr "dressShaderSG.pa" ":renderPartition.st" -na;
+connectAttr "lightPink.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiFlat2.msg" ":defaultShaderList1.s" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:shirtShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:skinShader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:blackFlat.msg" ":defaultShaderList1.s" 
+		-na;
+connectAttr "orangeShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:greyFlat.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "dressShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "FoxGirl_Latest:place2dTexture1.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "Human_Latest:directionalLightShape1.ltd" ":lightList1.l" -na;
-connectAttr "Human_Latest:toneMap_ramp.msg" ":defaultTextureList1.tx" -na;
-connectAttr "Human_Latest:rim_ramp.msg" ":defaultTextureList1.tx" -na;
-connectAttr "ramp1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "YoungSamLatest_leftLegDirectionShape.iog" ":initialShadingGroup.dsm"
+connectAttr "FoxGirl_Latest:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na
+		;
+connectAttr "FoxGirl_Latest:Human_Latest:directionalLightShape1.ltd" ":lightList1.l"
 		 -na;
-connectAttr "YoungSamLatest_rightLegDirectionShape.iog" ":initialShadingGroup.dsm"
+connectAttr "ramp6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "ramp7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:rim_ramp.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Human_Latest:directionalLight1.iog" ":defaultLightSet.dsm" -na;
-connectAttr "Human_Latest:ikRPsolver.msg" ":ikSystem.sol" -na;
+connectAttr "FoxGirl_Latest:ramp1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "rim_ramp.msg" ":defaultTextureList1.tx" -na;
+connectAttr "ramp8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "FoxGirl_Latest:YoungSamLatest_leftLegDirectionShape.iog" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:YoungSamLatest_rightLegDirectionShape.iog" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "FoxGirl_Latest:Human_Latest:directionalLight1.iog" ":defaultLightSet.dsm"
+		 -na;
+connectAttr "FoxGirl_Latest:Human_Latest:ikRPsolver.msg" ":ikSystem.sol" -na;
 // End of FoxGirl_Latest.ma
